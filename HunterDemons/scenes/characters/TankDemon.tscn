@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/TankDemon.gd" id="1_tank_script"]
+[ext_resource type="PackedScene" path="res://assets/demons/Demon/Demon.gltf" id="2_tank_model"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tank"]
+radius = 0.85
+height = 2.4
+
+[node name="TankDemon" type="CharacterBody3D"]
+script = ExtResource("1_tank_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 1.2, 0)
+shape = SubResource("CapsuleShape3D_tank")
+
+[node name="ModelRoot" type="Node3D" parent="." instance=ExtResource("2_tank_model")]

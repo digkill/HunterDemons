@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/DragonSpirit.gd" id="1_dragon_spirit"]
+[ext_resource type="PackedScene" path="res://assets/Chinese Dragon Lantern/Chinese Dragon Lantern.gltf" id="2_dragon_model"]
+
+[node name="DragonSpirit" type="Node3D"]
+script = ExtResource("1_dragon_spirit")
+
+[node name="ModelPivot" type="Node3D" parent="."]
+transform = Transform3D(0.018, 0, 0, 0, 0.018, 0, 0, 0, 0.018, 0, 0, 0)
+
+[node name="DragonModel" parent="ModelPivot" instance=ExtResource("2_dragon_model")]
+
+[node name="DragonLight" type="OmniLight3D" parent="."]
+light_color = Color(0.55, 0.95, 1, 1)
+light_energy = 2.4
+omni_range = 7.0

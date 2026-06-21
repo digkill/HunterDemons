@@ -1,0 +1,34 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/player/Player.gd" id="script_player"]
+[ext_resource type="PackedScene" path="res://assets/MainHero/hero.tscn" id="1_pq8s5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gin2a"]
+radius = 0.42
+height = 1.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7n8ao"]
+transparency = 1
+albedo_color = Color(0.4, 0.95, 1, 0.1)
+emission_enabled = true
+emission = Color(0.4, 0.95, 1, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_7wym0"]
+inner_radius = 0.8
+outer_radius = 0.95
+
+[node name="Player" type="CharacterBody3D" unique_id=1622186113]
+script = ExtResource("script_player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1494142387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("CapsuleShape3D_gin2a")
+
+[node name="VisualRoot" type="Node3D" parent="." unique_id=1913554367]
+
+[node name="HeroModel" type="Node3D" parent="VisualRoot" unique_id=1916870028 instance=ExtResource("1_pq8s5")]
+
+[node name="UltRing" type="MeshInstance3D" parent="." unique_id=739981264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+material_override = SubResource("StandardMaterial3D_7n8ao")
+mesh = SubResource("TorusMesh_7wym0")

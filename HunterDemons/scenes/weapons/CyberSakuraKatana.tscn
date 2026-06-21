@@ -1,0 +1,46 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ds6lw"]
+albedo_color = Color(0.12, 0.08, 0.1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u5kqr"]
+top_radius = 0.018
+bottom_radius = 0.018
+height = 0.26
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anxux"]
+albedo_color = Color(0.55, 0.45, 0.2, 1)
+metallic = 0.8
+roughness = 0.35
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_37chf"]
+top_radius = 0.045
+bottom_radius = 0.045
+height = 0.012
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jldg5"]
+albedo_color = Color(0.85, 0.08, 0.12, 1)
+metallic = 0.7
+roughness = 0.25
+emission_enabled = true
+emission = Color(1, 0.1, 0.15, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_plicu"]
+size = Vector3(0.012, 0.78, 0.035)
+
+[node name="CyberSakuraKatana" type="Node3D" unique_id=1533309472]
+
+[node name="Handle" type="MeshInstance3D" parent="." unique_id=1156963031]
+material_override = SubResource("StandardMaterial3D_ds6lw")
+mesh = SubResource("CylinderMesh_u5kqr")
+
+[node name="Guard" type="MeshInstance3D" parent="." unique_id=2053180035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0)
+material_override = SubResource("StandardMaterial3D_anxux")
+mesh = SubResource("CylinderMesh_37chf")
+
+[node name="Blade" type="MeshInstance3D" parent="." unique_id=1650686360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53, 0)
+material_override = SubResource("StandardMaterial3D_jldg5")
+mesh = SubResource("BoxMesh_plicu")

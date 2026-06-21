@@ -1,0 +1,27 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/Demon.gd" id="script_demon"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dugaa"]
+radius = 0.45
+height = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gf164"]
+albedo_color = Color(0.7, 0.15, 0.1, 1)
+emission_enabled = true
+emission = Color(1, 0.2, 0.15, 1)
+emission_energy_multiplier = 0.35
+
+[sub_resource type="PrismMesh" id="PrismMesh_ipq4u"]
+size = Vector3(1, 1.5, 0.9)
+
+[node name="Demon" type="CharacterBody3D" unique_id=1800573209]
+script = ExtResource("script_demon")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=55407480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_dugaa")
+
+[node name="Body" type="MeshInstance3D" parent="." unique_id=738214718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_gf164")
+mesh = SubResource("PrismMesh_ipq4u")

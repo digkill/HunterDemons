@@ -1,0 +1,350 @@
+[gd_scene format=3 uid="uid://duljhej3qe3ej"]
+
+[ext_resource type="PackedScene" uid="uid://d0hmqpc6hl0xv" path="res://assets/location/Vilage/Vilgae.gltf" id="1_ru7ng"]
+[ext_resource type="Script" uid="uid://bopqymxabcpnw" path="res://scripts/levels/InteractablePoint.gd" id="2_2ustx"]
+[ext_resource type="Script" uid="uid://bf6vsbne0n1e3" path="res://scripts/levels/VillageLevel.gd" id="script_village_level"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r552y"]
+sky_top_color = Color(0.55, 0.72, 0.9, 1)
+sky_horizon_color = Color(0.9, 0.82, 0.72, 1)
+ground_bottom_color = Color(0.18, 0.22, 0.14, 1)
+ground_horizon_color = Color(0.62, 0.55, 0.4, 1)
+
+[sub_resource type="Sky" id="Sky_yugd3"]
+sky_material = SubResource("ProceduralSkyMaterial_r552y")
+
+[sub_resource type="Environment" id="Environment_5so3g"]
+background_mode = 2
+sky = SubResource("Sky_yugd3")
+ambient_light_source = 3
+ambient_light_energy = 1.1
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.72, 0.65, 0.55, 1)
+fog_density = 0.006
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_376n6"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlont"]
+albedo_color = Color(0.18, 0.07, 0.05, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mmant"]
+top_radius = 0.22
+bottom_radius = 0.28
+height = 3.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn81a"]
+albedo_color = Color(0.18, 0.07, 0.05, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_iwixv"]
+top_radius = 0.22
+bottom_radius = 0.28
+height = 3.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8bqb"]
+albedo_color = Color(0.18, 0.07, 0.05, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_18yj2"]
+size = Vector3(5.2, 0.45, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtuy1"]
+transparency = 1
+albedo_color = Color(0.9, 0.18, 0.26, 0.62)
+emission_enabled = true
+emission = Color(1, 0.16, 0.22, 1)
+emission_energy_multiplier = 0.7
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b4a5l"]
+size = Vector2(3.8, 2.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwayj"]
+albedo_color = Color(0.9, 0.28, 0.16, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vtnr3"]
+radius = 0.35
+height = 1.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h18tg"]
+albedo_color = Color(0.35, 0.95, 0.45, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v6oqf"]
+radius = 0.35
+height = 1.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n850"]
+albedo_color = Color(0.45, 0.85, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8or8b"]
+radius = 0.35
+height = 1.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8750"]
+albedo_color = Color(0.95, 0.72, 0.25, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_aw3ij"]
+radius = 0.35
+height = 1.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tv8kr"]
+albedo_color = Color(0.65, 0.55, 0.42, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xpg3i"]
+radius = 0.35
+height = 1.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1mfb"]
+albedo_color = Color(0.55, 0.2, 0.24, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8xw8o"]
+radius = 0.35
+height = 1.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uontj"]
+albedo_color = Color(0.35, 0.25, 0.58, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wopge"]
+radius = 0.35
+height = 1.45
+
+[node name="VillageLevel" type="Node3D" unique_id=1550508107]
+script = ExtResource("script_village_level")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1039453357]
+environment = SubResource("Environment_5so3g")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=965502100]
+transform = Transform3D(0.9396926, -0.22885615, 0.25417048, 0, 0.7431448, 0.6691306, -0.34202012, -0.6287771, 0.6983277, 0, 0, 0)
+light_energy = 1.4
+shadow_enabled = true
+
+[node name="FillLight" type="DirectionalLight3D" parent="." unique_id=2055368378]
+transform = Transform3D(-0.9396926, 0.14454399, -0.30997556, 0, 0.90630776, 0.42261827, 0.3420202, 0.39713126, -0.8516507, 0, 0, 0)
+light_energy = 0.35
+
+[node name="GroundCollision" type="StaticBody3D" parent="." unique_id=1782574585]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundCollision" unique_id=655720894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_376n6")
+
+[node name="VillageModel" parent="." unique_id=893840648 instance=ExtResource("1_ru7ng")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -7.0849533, 0, 0)
+
+[node name="Gate" type="Node3D" parent="." unique_id=1668525906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.567995)
+
+[node name="LeftPost" type="MeshInstance3D" parent="Gate" unique_id=1928932294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0383487, 1.75, 18.975258)
+material_override = SubResource("StandardMaterial3D_qlont")
+mesh = SubResource("CylinderMesh_mmant")
+
+[node name="RightPost" type="MeshInstance3D" parent="Gate" unique_id=842373437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.038348675, 1.75, 18.975258)
+material_override = SubResource("StandardMaterial3D_wn81a")
+mesh = SubResource("CylinderMesh_iwixv")
+
+[node name="Arch" type="MeshInstance3D" parent="Gate" unique_id=2029609008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0383487, 3.4, 18.975258)
+material_override = SubResource("StandardMaterial3D_l8bqb")
+mesh = SubResource("BoxMesh_18yj2")
+
+[node name="Portal" type="MeshInstance3D" parent="Gate" unique_id=1010959740]
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -2.0383487, 1.65, 19.175259)
+material_override = SubResource("StandardMaterial3D_wtuy1")
+mesh = SubResource("PlaneMesh_b4a5l")
+
+[node name="Interactables" type="Node3D" parent="." unique_id=1714920669]
+
+[node name="Кузница" type="Marker3D" parent="Interactables" unique_id=1077916183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1.5)
+script = ExtResource("2_2ustx")
+title = "Кузница"
+speaker = "Кузнец Кэндзи"
+text = "Кэндзи проверяет клинок «Кибер-Сакура», подтягивает крепления и ворчит, что сталь любит тишину перед боем."
+verb = "Войти"
+
+[node name="ShopLabel" type="Label3D" parent="Interactables/Кузница" unique_id=884816743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+billboard = 1
+modulate = Color(1, 0.92, 0.62, 1)
+text = "Кузница"
+font_size = 28
+outline_size = 8
+
+[node name="Body" type="MeshInstance3D" parent="Interactables/Кузница" unique_id=265315350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_jwayj")
+mesh = SubResource("CapsuleMesh_vtnr3")
+
+[node name="NameLabel" type="Label3D" parent="Interactables/Кузница" unique_id=224740005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+billboard = 1
+modulate = Color(1, 1, 1, 0.9)
+text = "Кузнец Кэндзи"
+font_size = 24
+outline_size = 6
+
+[node name="Лавкалекаря" type="Marker3D" parent="Interactables" unique_id=442550855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+script = ExtResource("2_2ustx")
+title = "Лавка лекаря"
+speaker = "Лекарь Мина"
+text = "Мина даёт Юкке горький настой. Перед боем здоровье восстановлено, а раны перевязаны."
+verb = "Войти"
+
+[node name="ShopLabel" type="Label3D" parent="Interactables/Лавкалекаря" unique_id=1178444223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+billboard = 1
+modulate = Color(1, 0.92, 0.62, 1)
+text = "Лавка лекаря"
+font_size = 28
+outline_size = 8
+
+[node name="Body" type="MeshInstance3D" parent="Interactables/Лавкалекаря" unique_id=548864668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_h18tg")
+mesh = SubResource("CapsuleMesh_v6oqf")
+
+[node name="NameLabel" type="Label3D" parent="Interactables/Лавкалекаря" unique_id=22851787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+billboard = 1
+modulate = Color(1, 1, 1, 0.9)
+text = "Лекарь Мина"
+font_size = 24
+outline_size = 6
+
+[node name="Магическаялавка" type="Marker3D" parent="Interactables" unique_id=1679754753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 1.5)
+script = ExtResource("2_2ustx")
+title = "Магическая лавка"
+speaker = "Чародей Рэн"
+text = "Рэн настраивает амулет дракона. Воздух звенит, и печати на рукояти вспыхивают голубым светом."
+verb = "Войти"
+
+[node name="ShopLabel" type="Label3D" parent="Interactables/Магическаялавка" unique_id=1694657849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+billboard = 1
+modulate = Color(1, 0.92, 0.62, 1)
+text = "Магическая лавка"
+font_size = 28
+outline_size = 8
+
+[node name="Body" type="MeshInstance3D" parent="Interactables/Магическаялавка" unique_id=58830047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_5n850")
+mesh = SubResource("CapsuleMesh_8or8b")
+
+[node name="NameLabel" type="Label3D" parent="Interactables/Магическаялавка" unique_id=1615572768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+billboard = 1
+modulate = Color(1, 1, 1, 0.9)
+text = "Чародей Рэн"
+font_size = 24
+outline_size = 6
+
+[node name="Святилищемико" type="Marker3D" parent="Interactables" unique_id=1246767026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+script = ExtResource("2_2ustx")
+title = "Святилище мико"
+speaker = "Мико Кагура"
+text = "Кагура слушает духов и шепчет маршрут: демоны ждут у старой дороги, но их строй ещё не сомкнулся."
+verb = "Войти"
+
+[node name="ShopLabel" type="Label3D" parent="Interactables/Святилищемико" unique_id=92074403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+billboard = 1
+modulate = Color(1, 0.92, 0.62, 1)
+text = "Святилище мико"
+font_size = 28
+outline_size = 8
+
+[node name="Body" type="MeshInstance3D" parent="Interactables/Святилищемико" unique_id=232595777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_p8750")
+mesh = SubResource("CapsuleMesh_aw3ij")
+
+[node name="NameLabel" type="Label3D" parent="Interactables/Святилищемико" unique_id=1730112288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+billboard = 1
+modulate = Color(1, 1, 1, 0.9)
+text = "Мико Кагура"
+font_size = 24
+outline_size = 6
+
+[node name="Староста" type="Marker3D" parent="Interactables" unique_id=1143821728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1)
+script = ExtResource("2_2ustx")
+title = "Староста"
+speaker = "Староста"
+text = "Староста кланяется: «Мы укрыли детей в подвалах. Вернись живой, Юкка»"
+
+[node name="Body" type="MeshInstance3D" parent="Interactables/Староста" unique_id=782542157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_tv8kr")
+mesh = SubResource("CapsuleMesh_xpg3i")
+
+[node name="NameLabel" type="Label3D" parent="Interactables/Староста" unique_id=1729718348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+billboard = 1
+modulate = Color(1, 1, 1, 0.9)
+text = "Староста"
+font_size = 24
+outline_size = 6
+
+[node name="Стражницаворот" type="Marker3D" parent="Interactables" unique_id=489334786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("2_2ustx")
+title = "Стражница ворот"
+speaker = "Стражница ворот"
+text = "Стражница показывает на север: «Путь к разлому открыт. Я удержу ворота, сколько смогу»"
+
+[node name="Body" type="MeshInstance3D" parent="Interactables/Стражницаворот" unique_id=2135760823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8755269, 0.75, 22.22782)
+material_override = SubResource("StandardMaterial3D_k1mfb")
+mesh = SubResource("CapsuleMesh_8xw8o")
+
+[node name="NameLabel" type="Label3D" parent="Interactables/Стражницаворот" unique_id=1811580006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04982, 1.9, 21.681692)
+billboard = 1
+modulate = Color(1, 1, 1, 0.9)
+text = "Стражница ворот"
+font_size = 24
+outline_size = 6
+
+[node name="Ученицамико" type="Marker3D" parent="Interactables" unique_id=2028550703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -0.5)
+script = ExtResource("2_2ustx")
+title = "Ученица мико"
+speaker = "Ученица мико"
+text = "Ученица протягивает оберег: «Он не остановит демона, но напомнит, ради кого ты сражаешься»"
+
+[node name="Body" type="MeshInstance3D" parent="Interactables/Ученицамико" unique_id=209227156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_uontj")
+mesh = SubResource("CapsuleMesh_wopge")
+
+[node name="NameLabel" type="Label3D" parent="Interactables/Ученицамико" unique_id=517605524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+billboard = 1
+modulate = Color(1, 1, 1, 0.9)
+text = "Ученица мико"
+font_size = 24
+outline_size = 6
+
+[node name="BattleGate" type="Marker3D" parent="Interactables" unique_id=1012035179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.5)
+script = ExtResource("2_2ustx")
+title = "Дорога к разлому"
+speaker = "Путь к бою"
+text = "За воротами начинается уровень «{level_name}». Когда закончишь дела в деревне, выходи на охоту."
+verb = "К бою"
+battle = true
+
+[node name="GateLevelLabel" type="Label3D" parent="Interactables/BattleGate" unique_id=842049360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.596327, 2.4, 19.008345)
+billboard = 1
+modulate = Color(1, 0.82, 0.62, 1)
+text = "К бою"
+font_size = 28
+outline_size = 8

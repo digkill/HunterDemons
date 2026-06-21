@@ -1,0 +1,16 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Результаты локального экспорта и сборки: пересоздаются из исходников.
+/build/
+
+# Метаданные импорта ресурсов Godot: создаются автоматически при первом запуске.
+*.import
+*.translation
+
+# Локальные данные редакторов и Mono.
+.mono/
+data_*/
+mono_crash.*.json
+.DS_Store

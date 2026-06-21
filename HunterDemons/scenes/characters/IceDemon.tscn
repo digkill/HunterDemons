@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/IceDemon.gd" id="script_ice"]
+[ext_resource type="PackedScene" path="res://assets/demons/icedemon/source/icedemon.glb" id="1_6fetc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b2355"]
+radius = 0.45
+height = 1.5
+
+[node name="IceDemon" type="CharacterBody3D" unique_id=571809982]
+script = ExtResource("script_ice")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1756946657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_b2355")
+
+[node name="ModelRoot" type="Node3D" parent="." unique_id=1125683687 instance=ExtResource("1_6fetc")]

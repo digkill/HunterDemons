@@ -1,0 +1,3421 @@
+{
+  "/i/users/me": {
+    "isAnonymous": true,
+    "features": [
+      "ff_analytics_package",
+      "ff_validate_forbidden_words",
+      "ff_epic_age_gating",
+      "ff_run_log_parsing_moulinette",
+      "ff_process_texture_with_protection",
+      "ff_editor_console",
+      "ff_elasticsearch_browse",
+      "ff_display_inspector_watermarking",
+      "ff_new_downloads_list",
+      "ff_useonevieweratatime",
+      "ff_collection_thumbnails",
+      "ff_ue_plugin",
+      "ff_sib_templates",
+      "ff_process_model_with_protection",
+      "ff_glb_archive",
+      "ff_backfill_from_replica",
+      "ff_debug_deleted_modelversion",
+      "ff_onetrust",
+      "ff_elasticsearch_other",
+      "ff_disable_comments",
+      "ff_react_model_page_popup",
+      "ff_paypal_shipping_address",
+      "ff_noai",
+      "ff_eg_analytics",
+      "ff_fab_public_release",
+      "ff_display_texture_with_protection",
+      "ff_newsfeed_v2",
+      "ff_emporium_sns",
+      "ff_eg_log_events",
+      "ff_data_handling",
+      "ff_org_project_lead",
+      "ff_free_license",
+      "ff_cache_population_sync",
+      "ff_artstation_pro_offer",
+      "ff_plan_renewal_email_monthly",
+      "ff_epic_only_auth_new_users",
+      "ff_generation_step_provider_optional",
+      "ff_report_flow",
+      "ff_pre_fab_ai_release",
+      "ff_epic_auth_lockdown",
+      "ff_settings_notifications",
+      "ff_promotional_content",
+      "ff_fab_migration_view",
+      "ff_dsa_sanction_email",
+      "ff_diplay_model_with_protection",
+      "ff_protection_use_derived_bytecode"
+    ],
+    "allowsRestricted": false
+  },
+  "/i/categories": {
+    "results": [
+      {
+        "uid": "ed9e048550b2478eb1ab2faaba192832",
+        "name": "Animals \u0026 Pets",
+        "slug": "animals-pets"
+      },
+      {
+        "uid": "f825c721edb541dbbc8cd210123616c7",
+        "name": "Architecture",
+        "slug": "architecture"
+      },
+      {
+        "uid": "e56c5de1e9344241909de76c5886f551",
+        "name": "Art \u0026 Abstract",
+        "slug": "art-abstract"
+      },
+      {
+        "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+        "name": "Cars \u0026 Vehicles",
+        "slug": "cars-vehicles"
+      },
+      {
+        "uid": "2d643ff5ed03405b9c34ecdffff9d8d8",
+        "name": "Characters \u0026 Creatures",
+        "slug": "characters-creatures"
+      },
+      {
+        "uid": "86f23935367b4a1f9647c8a20e03d716",
+        "name": "Cultural Heritage \u0026 History",
+        "slug": "cultural-heritage-history"
+      },
+      {
+        "uid": "d7cebaeca8604ebab1480e413404b679",
+        "name": "Electronics \u0026 Gadgets",
+        "slug": "electronics-gadgets"
+      },
+      {
+        "uid": "81bfbbfa2c9b4f218eed8609e3cf7aa6",
+        "name": "Fashion \u0026 Style",
+        "slug": "fashion-style"
+      },
+      {
+        "uid": "b3631aefd82b4eeba37aa5fc0b73b05a",
+        "name": "Food \u0026 Drink",
+        "slug": "food-drink"
+      },
+      {
+        "uid": "606f202e5a3c4e62bf9aab1cd9f63e1b",
+        "name": "Furniture \u0026 Home",
+        "slug": "furniture-home"
+      },
+      {
+        "uid": "357487fbb30a44ee8a0adf9b24829919",
+        "name": "Music",
+        "slug": "music"
+      },
+      {
+        "uid": "1a99e2b67fc84de0b3ea0d3925208a04",
+        "name": "Nature \u0026 Plants",
+        "slug": "nature-plants"
+      },
+      {
+        "uid": "34edc263260f43e693ed527495b6d9a4",
+        "name": "News \u0026 Politics",
+        "slug": "news-politics"
+      },
+      {
+        "uid": "93e6d27da62149c6b963039835f45997",
+        "name": "People",
+        "slug": "people"
+      },
+      {
+        "uid": "c51b29706d4e4e93a82e5eea7cbe6f91",
+        "name": "Places \u0026 Travel",
+        "slug": "places-travel"
+      },
+      {
+        "uid": "17d20ca7b35243d4a45171838b50704c",
+        "name": "Science \u0026 Technology",
+        "slug": "science-technology"
+      },
+      {
+        "uid": "ac8a0065d9e34fca8a3ffa9c6db39bff",
+        "name": "Sports \u0026 Fitness",
+        "slug": "sports-fitness"
+      },
+      {
+        "uid": "3badf36bd9f549bdba295334d75e04d3",
+        "name": "Weapons \u0026 Military",
+        "slug": "weapons-military"
+      }
+    ],
+    "count": 18
+  },
+  "displayStatus": "ok",
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9": {
+    "uid": "c987d91a61d849fab0a4fd7cb16335f9",
+    "user": {
+      "account": "basic",
+      "avatars": {
+        "uid": "6de5200f6cd548c3a6e21cfb039014d5",
+        "images": [
+          {
+            "width": 32,
+            "height": 32,
+            "size": 2589,
+            "url": "https://media.sketchfab.com/avatars/6de5200f6cd548c3a6e21cfb039014d5/c944e38ed6d74663b70caec7b4136d09.png"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "size": 5378,
+            "url": "https://media.sketchfab.com/avatars/6de5200f6cd548c3a6e21cfb039014d5/f5fd9a2b8dd04b2cae0dc2b8ea903494.png"
+          },
+          {
+            "width": 90,
+            "height": 90,
+            "size": 16715,
+            "url": "https://media.sketchfab.com/avatars/6de5200f6cd548c3a6e21cfb039014d5/298b1252126748da99c98dca38f6722f.png"
+          },
+          {
+            "width": 100,
+            "height": 100,
+            "size": 20401,
+            "url": "https://media.sketchfab.com/avatars/6de5200f6cd548c3a6e21cfb039014d5/cc739783bdbc495c92a6b4941355c1e1.png"
+          }
+        ]
+      },
+      "displayName": "Anastasia Grobby666 Dubrovina",
+      "isAiRestricted": false,
+      "traderSettings": {
+        "isTrader": null,
+        "isVerifiedTrader": false
+      },
+      "planDetail": null,
+      "profileUrl": "https://sketchfab.com/Grobby",
+      "uid": "4f7e40c2dbea4e04bbdedc0c07c94061",
+      "username": "Grobby"
+    },
+    "name": "Red Katana",
+    "description": "",
+    "thumbnails": {
+      "uid": "9f0a64dc366d452087d570dab2515a70",
+      "images": [
+        {
+          "uid": "6b8f7795969b4b29a71e96c5ca2ddf95",
+          "width": 1920,
+          "height": 1080,
+          "size": 79498,
+          "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/thumbnails/9f0a64dc366d452087d570dab2515a70/62213bc7cd834a7cbdc21f284f39a1bf.jpeg"
+        },
+        {
+          "uid": "1194e52ab1cb4f46b711457a78120475",
+          "width": 1024,
+          "height": 576,
+          "size": 18713,
+          "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/thumbnails/9f0a64dc366d452087d570dab2515a70/43bdd0cd796442ed8d3383db8dcd33c3.jpeg"
+        },
+        {
+          "uid": "197763db3c5c41b9940cee560407d280",
+          "width": 720,
+          "height": 405,
+          "size": 10521,
+          "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/thumbnails/9f0a64dc366d452087d570dab2515a70/275bea434b6c4184b2908958fc5a2a71.jpeg"
+        },
+        {
+          "uid": "cd5956c38ff349428a0b3dfccaca88f9",
+          "width": 256,
+          "height": 144,
+          "size": 2508,
+          "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/thumbnails/9f0a64dc366d452087d570dab2515a70/ba13011deee241459b9f6e00d0e0d4f2.jpeg"
+        },
+        {
+          "uid": "7e129731b17340c3aa7760e0ab6e3813",
+          "width": 64,
+          "height": 36,
+          "size": 883,
+          "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/thumbnails/9f0a64dc366d452087d570dab2515a70/377c6f82730d48b386298d813d4666d0.jpeg"
+        }
+      ]
+    },
+    "viewCount": 266,
+    "likeCount": 7,
+    "animationCount": 1,
+    "vertexCount": 11822,
+    "faceCount": 23548,
+    "staffpickedAt": null,
+    "publishedAt": "2022-10-19T11:26:20.566390",
+    "viewerUrl": "https://sketchfab.com/3d-models/red-katana-c987d91a61d849fab0a4fd7cb16335f9",
+    "embedUrl": "https://sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/embed",
+    "editorUrl": "https://sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/edit",
+    "license": null,
+    "isPublished": true,
+    "downloadType": "no",
+    "isInspectable": false,
+    "isDeleted": false,
+    "processingStatus": 2,
+    "processedAt": "2022-10-19T11:07:34.320498",
+    "status": {
+      "processing": "SUCCEEDED"
+    },
+    "isRestricted": false,
+    "files": [
+      {
+        "uid": "3e6a73837cab4da0858a17c7c0a52ef2",
+        "flag": 0,
+        "osgjsUrl": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/files/3e6a73837cab4da0858a17c7c0a52ef2/file.binz",
+        "modelSize": 153135,
+        "osgjsSize": 21785,
+        "wireframeSize": 80772,
+        "p": [
+          {
+            "v": 1,
+            "b": "Azhx/W8oAqb12MGYNFVFWrPJ/CuQWC3giNkTaCsAUWhCDMu0ihCy0hOAtrG7u2RSqzzQc7xRHPLc\navNfApbxwcvxyI9feuHXSCuJZG8pZQpEAD8ARACbc2/EokCLstuCVp9GuKPN56JobfuZTeOQeLnG\n8awcsnhknrN4YApecvpePCF50OA6Ur0khgx38dHS4g4QWBaeuk6seLb1VqmgScmE36Skg33DiLZJ\nbwsgfQ6S\u002BucgqGtGlkhTomSEXJCVTfhDiYA7lXaMMN4AMakghzYkWuj0ZRQt3MkhFIICwEMhe8J4\nJAszcFvEhv7Fk\u002Bmj4ifTBQgd8CW/jecAxzeejZVvzm6R4NSZ9KJG05C6RkuhrQPcdpnGw\u002B0E1ksu\n6RdKoUpVBpc5l9MFrhTnB8JCZVT1o8pMVZERJp\u002BLo9XXYQBKtCmbUbVKZTuREJ1N9hOSTYa9qOEC\nR67hwsHCqhAkKNAmmLHyYEgRDTFwMWQmPWJ8HzY7uSCQKyZDQvFwoGvFsWEr2rbATugbjcLUXYbB\nC0BCMcDtl7vsIGbDwKcxWQE90TygHZa9OS9ghBM=",
+            "d": true
+          }
+        ]
+      }
+    ],
+    "options": {
+      "scene": {
+        "postProcess": {
+          "dof": {
+            "enable": false,
+            "blurFar": 0.5,
+            "blurNear": 0.5,
+            "focusPoint": [
+              0,
+              0,
+              0
+            ]
+          },
+          "ssr": {
+            "enable": false,
+            "factor": 1
+          },
+          "taa": {
+            "enable": true,
+            "transparent": true
+          },
+          "ssao": {
+            "bias": 0.02653984045427604,
+            "enable": true,
+            "radius": 0.13269920227138018,
+            "intensity": 0.5
+          },
+          "bloom": {
+            "enable": true,
+            "factor": 1.0666666666666667,
+            "radius": 0.1111111111111111,
+            "threshold": 0.8333333333333334
+          },
+          "grain": {
+            "enable": true,
+            "factor": 0.15,
+            "animated": false
+          },
+          "enable": true,
+          "sharpen": {
+            "enable": true,
+            "factor": 0.2
+          },
+          "vignette": {
+            "amount": 0.4888888888888889,
+            "enable": true,
+            "hardness": 0.6944444444444444
+          },
+          "toneMapping": {
+            "enable": false,
+            "method": "filmic",
+            "contrast": 0.01,
+            "exposure": 1.5,
+            "brightness": 0.75,
+            "saturation": 0.8
+          },
+          "colorBalance": {
+            "low": [
+              0,
+              0,
+              0
+            ],
+            "mid": [
+              0,
+              0,
+              0
+            ],
+            "high": [
+              0,
+              0,
+              0
+            ],
+            "enable": false
+          },
+          "chromaticAberration": {
+            "enable": true,
+            "factor": 0.06777777777777778
+          }
+        },
+        "sssProfiles": [
+          {
+            "falloff": [
+              1,
+              0.37,
+              0.3
+            ],
+            "strength": [
+              0.48,
+              0.41,
+              0.28
+            ]
+          },
+          {
+            "falloff": [
+              0.5,
+              0.67,
+              0.6
+            ],
+            "strength": [
+              0.38,
+              0.61,
+              0.68
+            ]
+          },
+          {
+            "falloff": [
+              0.7,
+              0.77,
+              0.3
+            ],
+            "strength": [
+              0.88,
+              0.61,
+              0.28
+            ]
+          }
+        ]
+      },
+      "lighting": {
+        "enable": false,
+        "lights": [
+          {
+            "type": "DIRECTION",
+            "angle": 45,
+            "color": [
+              0.7806122448979592,
+              0.7985214493960848,
+              1
+            ],
+            "enable": true,
+            "ground": [
+              0.3,
+              0.2,
+              0.2
+            ],
+            "matrix": [
+              -0.7503616191055299,
+              0.6610110795540682,
+              -0.004668327333101102,
+              0,
+              0.4773982952137141,
+              0.5467871869322476,
+              0.6878332937084056,
+              0,
+              0.45721800959757053,
+              0.5138950524314072,
+              -0.7258536813891331,
+              0,
+              1.9228705648484044,
+              0.9312773793220979,
+              -2.5614081105186566,
+              1
+            ],
+            "falloff": 0.13686791878033194,
+            "hardness": 0.5,
+            "intensity": 0.96,
+            "shadowBias": 0.005,
+            "castShadows": false,
+            "intensityGround": 1,
+            "attachedToCamera": false
+          },
+          {
+            "type": "DIRECTION",
+            "angle": 45,
+            "color": [
+              1,
+              0.8783319450229073,
+              0.7091836734693877
+            ],
+            "enable": true,
+            "ground": [
+              0.3,
+              0.2,
+              0.2
+            ],
+            "matrix": [
+              0.6354261340239841,
+              -0.4495667639706031,
+              0.6277924441503967,
+              0,
+              0.704549987766181,
+              0.6702670419956587,
+              -0.233133882464682,
+              0,
+              -0.3159793394163624,
+              0.5904505204903987,
+              0.7426474533145686,
+              0,
+              -1.3604149203514184,
+              1.2563605646321918,
+              3.674397620994873,
+              1
+            ],
+            "falloff": 0.13686791878033194,
+            "hardness": 0.5,
+            "intensity": 1,
+            "shadowBias": 0.005,
+            "castShadows": false,
+            "intensityGround": 1,
+            "attachedToCamera": false
+          },
+          {
+            "type": "DIRECTION",
+            "angle": 45,
+            "color": [
+              0.423469387755102,
+              0.7352665556018328,
+              1
+            ],
+            "enable": true,
+            "ground": [
+              0.9642857142857143,
+              0.6484128636877489,
+              0.2607507288629738
+            ],
+            "matrix": [
+              0.23788775308819912,
+              -0.9595384482313783,
+              -0.15064986988498263,
+              0,
+              0.0904521956115185,
+              0.17631377575364088,
+              -0.9801692980238416,
+              0,
+              0.9670717746060508,
+              0.2195436604532425,
+              0.12873524736872857,
+              0,
+              4.087900577382323,
+              -0.31864885757302996,
+              1.0674965011972342,
+              1
+            ],
+            "falloff": 0.13686791878033194,
+            "hardness": 0.5,
+            "intensity": 0.12,
+            "shadowBias": 0.005,
+            "castShadows": false,
+            "intensityGround": 0.06,
+            "attachedToCamera": false
+          }
+        ]
+      },
+      "shading": {
+        "type": "lit",
+        "renderer": "pbr",
+        "pointSize": 2,
+        "vertexColor": {
+          "enable": false,
+          "useAlpha": false,
+          "colorSpace": "srgb"
+        }
+      },
+      "orientation": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "camera": {
+        "up": 1.555089,
+        "fov": 45,
+        "down": -1.555089,
+        "left": -3.141593,
+        "right": 3.141593,
+        "target": [
+          0.4098387731597984,
+          -0.10458512170790953,
+          -0.03440347349454089
+        ],
+        "zoomIn": 0,
+        "zoomOut": 716.575692265453,
+        "position": [
+          7.564847091721707,
+          4.945632318316126,
+          -0.3224161159406901
+        ],
+        "nearFarRatio": 0.005,
+        "usePanConstraints": true,
+        "useYawConstraints": false,
+        "useZoomConstraints": false,
+        "usePitchConstraints": false,
+        "useCameraConstraints": false
+      },
+      "wireframe": {
+        "color": "000000FF",
+        "enable": false
+      },
+      "materials": {
+        "updatedAt": 16661788212,
+        "1a348df0-f3ff-429c-ba9c-883fa95f755e": {
+          "id": "1a348df0-f3ff-429c-ba9c-883fa95f755e",
+          "name": "Metal",
+          "version": 3,
+          "channels": {
+            "AOPBR": {
+              "enable": false,
+              "factor": 1,
+              "occludeSpecular": true
+            },
+            "Sheen": {
+              "enable": true,
+              "factor": 0.10209554924357864,
+              "colorFactor": [
+                0.021538330396693263,
+                0.0038609730650060784,
+                0.14107431122548625
+              ]
+            },
+            "Matcap": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "35c4d334eded44d8a657f390954a32dd",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "curvature": 0,
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "BumpMap": {
+              "enable": false,
+              "factor": 1
+            },
+            "Opacity": {
+              "ior": 1.05,
+              "type": "alphaBlend",
+              "enable": false,
+              "factor": 1,
+              "invert": false,
+              "thinLayer": false,
+              "useAlbedoTint": false,
+              "refractionColor": [
+                1,
+                1,
+                1
+              ],
+              "roughnessFactor": 0,
+              "useNormalOffset": false,
+              "useMicrosurfaceTexture": true
+            },
+            "AlbedoPBR": {
+              "color": [
+                0.013729700000000001,
+                0.011673799999999998,
+                0.01598269999999999
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "AlphaMask": {
+              "enable": false,
+              "factor": 1,
+              "invert": false
+            },
+            "CavityPBR": {
+              "enable": false,
+              "factor": 1
+            },
+            "ClearCoat": {
+              "tint": [
+                0.914,
+                0.914,
+                0.914
+              ],
+              "enable": false,
+              "factor": 1,
+              "thickness": 5,
+              "reflectivity": 0
+            },
+            "EmitColor": {
+              "type": "additive",
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "NormalMap": {
+              "flipY": false,
+              "enable": true,
+              "factor": 0.650668649656837,
+              "texture": {
+                "uid": "cdd342672a194c8d9e745a71c27f606c",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "Anisotropy": {
+              "enable": false,
+              "factor": 1,
+              "flipXY": true,
+              "direction": 0
+            },
+            "DiffusePBR": {
+              "color": [
+                0.013729700000000001,
+                0.011673799999999998,
+                0.01598269999999999
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "SpecularF0": {
+              "enable": true,
+              "factor": 0.5
+            },
+            "SpecularPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseColor": {
+              "color": [
+                0.013729700000000001,
+                0.011673799999999998,
+                0.01598269999999999
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "Displacement": {
+              "enable": false,
+              "factor": 0
+            },
+            "MetalnessPBR": {
+              "enable": true,
+              "factor": 1
+            },
+            "RoughnessPBR": {
+              "enable": true,
+              "factor": 0.2
+            },
+            "GlossinessPBR": {
+              "enable": false,
+              "factor": 0.4
+            },
+            "SpecularColor": {
+              "color": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "enable": true,
+              "factor": 0
+            },
+            "SheenRoughness": {
+              "enable": false,
+              "factor": 0.75
+            },
+            "DiffuseIntensity": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularHardness": {
+              "enable": true,
+              "factor": 12.5
+            },
+            "ClearCoatNormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 1
+            },
+            "ClearCoatRoughness": {
+              "enable": true,
+              "factor": 0.04
+            },
+            "SubsurfaceScattering": {
+              "enable": false,
+              "factor": 0.26539840454276037,
+              "profile": 1
+            },
+            "SubsurfaceTranslucency": {
+              "color": [
+                1,
+                0.36999999999999983,
+                0.2999999999999998
+              ],
+              "enable": false,
+              "factor": 1,
+              "thicknessFactor": 0.26539840454276037
+            }
+          },
+          "cullFace": "DISABLE",
+          "shadeless": false,
+          "reflection": 0.1,
+          "stateSetID": 1
+        },
+        "4b18427e-aaf9-4c2a-b7e6-ce0d7c9d7a91": {
+          "id": "4b18427e-aaf9-4c2a-b7e6-ce0d7c9d7a91",
+          "name": "Emission",
+          "version": 3,
+          "channels": {
+            "AOPBR": {
+              "enable": false,
+              "factor": 1,
+              "occludeSpecular": true
+            },
+            "Sheen": {
+              "enable": false,
+              "factor": 1,
+              "colorFactor": [
+                1,
+                1,
+                1
+              ]
+            },
+            "Matcap": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "35c4d334eded44d8a657f390954a32dd",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "curvature": 0,
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "BumpMap": {
+              "enable": true,
+              "factor": 10,
+              "texture": {
+                "uid": "cdd342672a194c8d9e745a71c27f606c",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "LUMINANCE"
+              },
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "Opacity": {
+              "ior": 1.05,
+              "type": "alphaBlend",
+              "enable": true,
+              "factor": 0.75,
+              "invert": false,
+              "thinLayer": false,
+              "useAlbedoTint": false,
+              "refractionColor": [
+                1,
+                1,
+                1
+              ],
+              "roughnessFactor": 0,
+              "useNormalOffset": false,
+              "useMicrosurfaceTexture": true
+            },
+            "AlbedoPBR": {
+              "color": [
+                0.7579697625090449,
+                0.016764556874493592,
+                0.016764556874493592
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "AlphaMask": {
+              "enable": false,
+              "factor": 1,
+              "invert": false
+            },
+            "CavityPBR": {
+              "enable": false,
+              "factor": 1
+            },
+            "ClearCoat": {
+              "tint": [
+                0.914,
+                0.914,
+                0.914
+              ],
+              "enable": false,
+              "factor": 1,
+              "thickness": 5,
+              "reflectivity": 0
+            },
+            "EmitColor": {
+              "type": "additive",
+              "color": [
+                1,
+                0.0010274254089153144,
+                0.0010274254089153144
+              ],
+              "enable": true,
+              "factor": 4.921919762041179
+            },
+            "NormalMap": {
+              "flipY": false,
+              "enable": false,
+              "factor": 1,
+              "texture": {
+                "uid": "cdd342672a194c8d9e745a71c27f606c",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "Anisotropy": {
+              "enable": false,
+              "factor": 1,
+              "flipXY": true,
+              "direction": 0
+            },
+            "DiffusePBR": {
+              "color": [
+                0.7579697625090449,
+                0.016764556874493592,
+                0.016764556874493592
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "SpecularF0": {
+              "enable": true,
+              "factor": 0.6
+            },
+            "SpecularPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseColor": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "Displacement": {
+              "enable": false,
+              "factor": 0
+            },
+            "MetalnessPBR": {
+              "enable": true,
+              "factor": 1
+            },
+            "RoughnessPBR": {
+              "enable": false,
+              "factor": 0
+            },
+            "GlossinessPBR": {
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularColor": {
+              "color": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "enable": true,
+              "factor": 0
+            },
+            "SheenRoughness": {
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseIntensity": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularHardness": {
+              "enable": true,
+              "factor": 12.5
+            },
+            "ClearCoatNormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 1
+            },
+            "ClearCoatRoughness": {
+              "enable": true,
+              "factor": 0.04
+            },
+            "SubsurfaceScattering": {
+              "enable": false,
+              "factor": 0.26539840454276037,
+              "profile": 1
+            },
+            "SubsurfaceTranslucency": {
+              "color": [
+                1,
+                0.36999999999999983,
+                0.2999999999999998
+              ],
+              "enable": false,
+              "factor": 1,
+              "thicknessFactor": 0.26539840454276037
+            }
+          },
+          "cullFace": "DISABLE",
+          "shadeless": false,
+          "reflection": 0.1,
+          "stateSetID": 3
+        },
+        "b78781d8-3baa-4710-97b7-2fe5d2534df8": {
+          "id": "b78781d8-3baa-4710-97b7-2fe5d2534df8",
+          "name": "Rug",
+          "version": 3,
+          "channels": {
+            "AOPBR": {
+              "enable": false,
+              "factor": 1,
+              "occludeSpecular": true
+            },
+            "Sheen": {
+              "enable": false,
+              "factor": 1,
+              "colorFactor": [
+                1,
+                1,
+                1
+              ]
+            },
+            "Matcap": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "35c4d334eded44d8a657f390954a32dd",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "curvature": 0,
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "BumpMap": {
+              "enable": false,
+              "factor": 1
+            },
+            "Opacity": {
+              "ior": 1.05,
+              "type": "alphaBlend",
+              "enable": false,
+              "factor": 1,
+              "invert": false,
+              "thinLayer": false,
+              "useAlbedoTint": false,
+              "refractionColor": [
+                1,
+                1,
+                1
+              ],
+              "roughnessFactor": 0,
+              "useNormalOffset": false,
+              "useMicrosurfaceTexture": true
+            },
+            "AlbedoPBR": {
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "e24f8d2d2aad4224bdd69fb6caf507e8",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "AlphaMask": {
+              "enable": false,
+              "factor": 1,
+              "invert": false
+            },
+            "CavityPBR": {
+              "enable": false,
+              "factor": 1
+            },
+            "ClearCoat": {
+              "tint": [
+                0.914,
+                0.914,
+                0.914
+              ],
+              "enable": false,
+              "factor": 1,
+              "thickness": 5,
+              "reflectivity": 0
+            },
+            "EmitColor": {
+              "type": "additive",
+              "color": [
+                0.017435500000000007,
+                0.0128413,
+                0.07662829999999998
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "NormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 0.45,
+              "texture": {
+                "uid": "7c2ceb8e67684f3da908eeb403dc73db",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "Anisotropy": {
+              "enable": false,
+              "factor": 1,
+              "flipXY": true,
+              "direction": 0
+            },
+            "DiffusePBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "SpecularF0": {
+              "enable": true,
+              "factor": 0
+            },
+            "SpecularPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 0
+            },
+            "DiffuseColor": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "Displacement": {
+              "enable": false,
+              "factor": 0
+            },
+            "MetalnessPBR": {
+              "enable": true,
+              "factor": 0.35
+            },
+            "RoughnessPBR": {
+              "enable": true,
+              "factor": 0.15
+            },
+            "GlossinessPBR": {
+              "enable": false,
+              "factor": 0.4
+            },
+            "SpecularColor": {
+              "color": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "enable": true,
+              "factor": 0
+            },
+            "SheenRoughness": {
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseIntensity": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularHardness": {
+              "enable": true,
+              "factor": 12.5
+            },
+            "ClearCoatNormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 1
+            },
+            "ClearCoatRoughness": {
+              "enable": true,
+              "factor": 0.04
+            },
+            "SubsurfaceScattering": {
+              "enable": false,
+              "factor": 0.26539840454276037,
+              "profile": 1
+            },
+            "SubsurfaceTranslucency": {
+              "color": [
+                1,
+                0.36999999999999983,
+                0.2999999999999998
+              ],
+              "enable": false,
+              "factor": 1,
+              "thicknessFactor": 0.26539840454276037
+            }
+          },
+          "cullFace": "DISABLE",
+          "shadeless": false,
+          "reflection": 0.1,
+          "stateSetID": 4
+        },
+        "bd0672d8-136f-4c5b-a178-368a7dcf23a8": {
+          "id": "bd0672d8-136f-4c5b-a178-368a7dcf23a8",
+          "name": "RedMetal",
+          "version": 3,
+          "channels": {
+            "AOPBR": {
+              "enable": false,
+              "factor": 1,
+              "occludeSpecular": true
+            },
+            "Sheen": {
+              "enable": false,
+              "factor": 1,
+              "colorFactor": [
+                1,
+                1,
+                1
+              ]
+            },
+            "Matcap": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "35c4d334eded44d8a657f390954a32dd",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "curvature": 0,
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "BumpMap": {
+              "enable": false,
+              "factor": 1
+            },
+            "Opacity": {
+              "ior": 1.05,
+              "type": "alphaBlend",
+              "enable": false,
+              "factor": 1,
+              "invert": false,
+              "thinLayer": false,
+              "useAlbedoTint": false,
+              "refractionColor": [
+                1,
+                1,
+                1
+              ],
+              "roughnessFactor": 0,
+              "useNormalOffset": false,
+              "useMicrosurfaceTexture": true
+            },
+            "AlbedoPBR": {
+              "color": [
+                0.184469,
+                0.003790720000000001,
+                0.006975630000000001
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "AlphaMask": {
+              "enable": false,
+              "factor": 1,
+              "invert": false
+            },
+            "CavityPBR": {
+              "enable": false,
+              "factor": 1
+            },
+            "ClearCoat": {
+              "tint": [
+                0.914,
+                0.914,
+                0.914
+              ],
+              "enable": false,
+              "factor": 1,
+              "thickness": 5,
+              "reflectivity": 0
+            },
+            "EmitColor": {
+              "type": "additive",
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "NormalMap": {
+              "flipY": false,
+              "enable": false,
+              "factor": 1
+            },
+            "Anisotropy": {
+              "enable": false,
+              "factor": 1,
+              "flipXY": true,
+              "direction": 0
+            },
+            "DiffusePBR": {
+              "color": [
+                0.184469,
+                0.003790720000000001,
+                0.006975630000000001
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "SpecularF0": {
+              "enable": true,
+              "factor": 0.5
+            },
+            "SpecularPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseColor": {
+              "color": [
+                0.184469,
+                0.003790720000000001,
+                0.006975630000000001
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "Displacement": {
+              "enable": false,
+              "factor": 0
+            },
+            "MetalnessPBR": {
+              "enable": true,
+              "factor": 1
+            },
+            "RoughnessPBR": {
+              "enable": true,
+              "factor": 0.1
+            },
+            "GlossinessPBR": {
+              "enable": false,
+              "factor": 0.4
+            },
+            "SpecularColor": {
+              "color": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "enable": true,
+              "factor": 0
+            },
+            "SheenRoughness": {
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseIntensity": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularHardness": {
+              "enable": true,
+              "factor": 12.5
+            },
+            "ClearCoatNormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 1
+            },
+            "ClearCoatRoughness": {
+              "enable": true,
+              "factor": 0.04
+            },
+            "SubsurfaceScattering": {
+              "enable": false,
+              "factor": 0.26539840454276037,
+              "profile": 1
+            },
+            "SubsurfaceTranslucency": {
+              "color": [
+                1,
+                0.36999999999999983,
+                0.2999999999999998
+              ],
+              "enable": false,
+              "factor": 1,
+              "thicknessFactor": 0.26539840454276037
+            }
+          },
+          "cullFace": "DISABLE",
+          "shadeless": false,
+          "reflection": 0.1,
+          "stateSetID": 2
+        },
+        "ca1a533e-ddcd-4485-a2f5-780ca7cd5662": {
+          "id": "ca1a533e-ddcd-4485-a2f5-780ca7cd5662",
+          "name": "BlackMetal",
+          "version": 3,
+          "channels": {
+            "AOPBR": {
+              "enable": false,
+              "factor": 1,
+              "occludeSpecular": true
+            },
+            "Sheen": {
+              "enable": false,
+              "factor": 1,
+              "colorFactor": [
+                1,
+                1,
+                1
+              ]
+            },
+            "Matcap": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "35c4d334eded44d8a657f390954a32dd",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "curvature": 0,
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "BumpMap": {
+              "enable": false,
+              "factor": 1
+            },
+            "Opacity": {
+              "ior": 1.05,
+              "type": "alphaBlend",
+              "enable": false,
+              "factor": 1,
+              "invert": false,
+              "thinLayer": false,
+              "useAlbedoTint": false,
+              "refractionColor": [
+                1,
+                1,
+                1
+              ],
+              "roughnessFactor": 0,
+              "useNormalOffset": false,
+              "useMicrosurfaceTexture": true
+            },
+            "AlbedoPBR": {
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "AlphaMask": {
+              "enable": false,
+              "factor": 1,
+              "invert": false
+            },
+            "CavityPBR": {
+              "enable": false,
+              "factor": 1
+            },
+            "ClearCoat": {
+              "tint": [
+                0.914,
+                0.914,
+                0.914
+              ],
+              "enable": false,
+              "factor": 1,
+              "thickness": 5,
+              "reflectivity": 0
+            },
+            "EmitColor": {
+              "type": "additive",
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "NormalMap": {
+              "flipY": false,
+              "enable": false,
+              "factor": 1
+            },
+            "Anisotropy": {
+              "enable": false,
+              "factor": 1,
+              "flipXY": true,
+              "direction": 0
+            },
+            "DiffusePBR": {
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "SpecularF0": {
+              "enable": true,
+              "factor": 0.5
+            },
+            "SpecularPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseColor": {
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "Displacement": {
+              "enable": false,
+              "factor": 0
+            },
+            "MetalnessPBR": {
+              "enable": true,
+              "factor": 1
+            },
+            "RoughnessPBR": {
+              "enable": true,
+              "factor": 0.1
+            },
+            "GlossinessPBR": {
+              "enable": false,
+              "factor": 0.4
+            },
+            "SpecularColor": {
+              "color": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "enable": true,
+              "factor": 0
+            },
+            "SheenRoughness": {
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseIntensity": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularHardness": {
+              "enable": true,
+              "factor": 12.5
+            },
+            "ClearCoatNormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 1
+            },
+            "ClearCoatRoughness": {
+              "enable": true,
+              "factor": 0.04
+            },
+            "SubsurfaceScattering": {
+              "enable": false,
+              "factor": 0.26539840454276037,
+              "profile": 1
+            },
+            "SubsurfaceTranslucency": {
+              "color": [
+                1,
+                0.37,
+                0.3
+              ],
+              "enable": false,
+              "factor": 1,
+              "thicknessFactor": 0.26539840454276037
+            }
+          },
+          "cullFace": "DISABLE",
+          "shadeless": false,
+          "reflection": 0.1,
+          "stateSetID": 5
+        },
+        "e4ef4749-4d9c-46ec-af63-d64939f36d54": {
+          "id": "e4ef4749-4d9c-46ec-af63-d64939f36d54",
+          "name": "material_0",
+          "version": 3,
+          "channels": {
+            "AOPBR": {
+              "enable": false,
+              "factor": 1,
+              "occludeSpecular": false
+            },
+            "Sheen": {
+              "enable": false,
+              "factor": 1,
+              "colorFactor": [
+                1,
+                1,
+                1
+              ]
+            },
+            "Matcap": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "35c4d334eded44d8a657f390954a32dd",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "curvature": 0,
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "BumpMap": {
+              "enable": false,
+              "factor": 1
+            },
+            "Opacity": {
+              "ior": 1.05,
+              "type": "alphaBlend",
+              "enable": false,
+              "factor": 1,
+              "invert": false,
+              "thinLayer": false,
+              "useAlbedoTint": false,
+              "refractionColor": [
+                1,
+                1,
+                1
+              ],
+              "roughnessFactor": 0,
+              "useNormalOffset": false,
+              "useMicrosurfaceTexture": true
+            },
+            "AlbedoPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "AlphaMask": {
+              "enable": false,
+              "factor": 1,
+              "invert": false
+            },
+            "CavityPBR": {
+              "enable": false,
+              "factor": 1
+            },
+            "ClearCoat": {
+              "tint": [
+                0.914,
+                0.914,
+                0.914
+              ],
+              "enable": false,
+              "factor": 1,
+              "thickness": 5,
+              "reflectivity": 0
+            },
+            "EmitColor": {
+              "type": "additive",
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 0
+            },
+            "NormalMap": {
+              "flipY": true,
+              "enable": false,
+              "factor": 1
+            },
+            "Anisotropy": {
+              "enable": false,
+              "factor": 1,
+              "flipXY": true,
+              "direction": 0
+            },
+            "DiffusePBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "SpecularF0": {
+              "enable": true,
+              "factor": 0.5
+            },
+            "SpecularPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 0
+            },
+            "DiffuseColor": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "Displacement": {
+              "enable": false,
+              "factor": 0
+            },
+            "MetalnessPBR": {
+              "enable": true,
+              "factor": 0
+            },
+            "RoughnessPBR": {
+              "enable": true,
+              "factor": 0.6
+            },
+            "GlossinessPBR": {
+              "enable": false,
+              "factor": 0.4
+            },
+            "SpecularColor": {
+              "color": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "enable": true,
+              "factor": 0
+            },
+            "SheenRoughness": {
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseIntensity": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularHardness": {
+              "enable": true,
+              "factor": 12.5
+            },
+            "ClearCoatNormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 1
+            },
+            "ClearCoatRoughness": {
+              "enable": true,
+              "factor": 0.04
+            },
+            "SubsurfaceScattering": {
+              "enable": false,
+              "factor": 0.26539840454276037,
+              "profile": 1
+            },
+            "SubsurfaceTranslucency": {
+              "color": [
+                1,
+                0.37,
+                0.3
+              ],
+              "enable": false,
+              "factor": 1,
+              "thicknessFactor": 0.26539840454276037
+            }
+          },
+          "cullFace": "DISABLE",
+          "shadeless": false,
+          "reflection": 0.1,
+          "stateSetID": 0
+        },
+        "f3446357-0118-4b93-9c74-4eac2ac0bb30": {
+          "id": "f3446357-0118-4b93-9c74-4eac2ac0bb30",
+          "name": "Material",
+          "version": 3,
+          "channels": {
+            "AOPBR": {
+              "enable": false,
+              "factor": 1,
+              "occludeSpecular": true
+            },
+            "Sheen": {
+              "enable": false,
+              "factor": 1,
+              "colorFactor": [
+                1,
+                1,
+                1
+              ]
+            },
+            "Matcap": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1,
+              "texture": {
+                "uid": "35c4d334eded44d8a657f390954a32dd",
+                "wrapS": "REPEAT",
+                "wrapT": "REPEAT",
+                "magFilter": "LINEAR",
+                "minFilter": "LINEAR_MIPMAP_LINEAR",
+                "texCoordUnit": 0,
+                "textureTarget": "TEXTURE_2D",
+                "internalFormat": "RGB"
+              },
+              "curvature": 0,
+              "UVTransforms": {
+                "scale": [
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "rotation": 0
+              }
+            },
+            "BumpMap": {
+              "enable": false,
+              "factor": 1
+            },
+            "Opacity": {
+              "ior": 1.05,
+              "type": "alphaBlend",
+              "enable": false,
+              "factor": 1,
+              "invert": false,
+              "thinLayer": false,
+              "useAlbedoTint": false,
+              "refractionColor": [
+                1,
+                1,
+                1
+              ],
+              "roughnessFactor": 0,
+              "useNormalOffset": false,
+              "useMicrosurfaceTexture": true
+            },
+            "AlbedoPBR": {
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "AlphaMask": {
+              "enable": false,
+              "factor": 1,
+              "invert": false
+            },
+            "CavityPBR": {
+              "enable": false,
+              "factor": 1
+            },
+            "ClearCoat": {
+              "tint": [
+                0.914,
+                0.914,
+                0.914
+              ],
+              "enable": false,
+              "factor": 1,
+              "thickness": 5,
+              "reflectivity": 0
+            },
+            "EmitColor": {
+              "type": "additive",
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "NormalMap": {
+              "flipY": false,
+              "enable": false,
+              "factor": 1
+            },
+            "Anisotropy": {
+              "enable": false,
+              "factor": 1,
+              "flipXY": true,
+              "direction": 0
+            },
+            "DiffusePBR": {
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": false,
+              "factor": 1
+            },
+            "SpecularF0": {
+              "enable": true,
+              "factor": 0.05
+            },
+            "SpecularPBR": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": false,
+              "factor": 0
+            },
+            "DiffuseColor": {
+              "color": [
+                0,
+                0,
+                0
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "Displacement": {
+              "enable": false,
+              "factor": 0
+            },
+            "MetalnessPBR": {
+              "enable": true,
+              "factor": 0
+            },
+            "RoughnessPBR": {
+              "enable": true,
+              "factor": 0.85
+            },
+            "GlossinessPBR": {
+              "enable": false,
+              "factor": 0.4
+            },
+            "SpecularColor": {
+              "color": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "enable": true,
+              "factor": 0
+            },
+            "SheenRoughness": {
+              "enable": false,
+              "factor": 1
+            },
+            "DiffuseIntensity": {
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "enable": true,
+              "factor": 1
+            },
+            "SpecularHardness": {
+              "enable": true,
+              "factor": 12.5
+            },
+            "ClearCoatNormalMap": {
+              "flipY": true,
+              "enable": true,
+              "factor": 1
+            },
+            "ClearCoatRoughness": {
+              "enable": true,
+              "factor": 0.04
+            },
+            "SubsurfaceScattering": {
+              "enable": false,
+              "factor": 0.26539840454276037,
+              "profile": 1
+            },
+            "SubsurfaceTranslucency": {
+              "color": [
+                1,
+                0.36999999999999983,
+                0.2999999999999998
+              ],
+              "enable": false,
+              "factor": 1,
+              "thicknessFactor": 0.26539840454276037
+            }
+          },
+          "cullFace": "DISABLE",
+          "shadeless": false,
+          "reflection": 0.1,
+          "stateSetID": 6
+        }
+      },
+      "environment": {
+        "uid": "cd5e5b1607d844cdb928e96ff9c36b5c",
+        "blur": 0.1,
+        "enable": true,
+        "exposure": 14.336000000000002,
+        "rotation": 3.913960847606107,
+        "shadowBias": 0.005,
+        "shadowEnable": true,
+        "lightIntensity": 3,
+        "backgroundExposure": 0.15
+      },
+      "background": {
+        "uid": "3ef1bd11d3eb4b57a0b353e8f2e5fc3e",
+        "color": [
+          0.047244800019439134,
+          0.045764081255770965,
+          0.05701754385964908
+        ],
+        "enable": "color"
+      },
+      "version": 9,
+      "animation": {
+        "order": [
+          "afb3929f45c54e1e9878a861e3aa55a5"
+        ],
+        "speed": 1,
+        "cycleMode": "one",
+        "initializeWithRestPose": false
+      },
+      "hotspot": {
+        "visible": true,
+        "hotspots": []
+      },
+      "vr": {
+        "floorHeight": -2.2621504196946356,
+        "worldFactor": 2.653984045427604,
+        "displayFloor": true,
+        "initialCamera": {
+          "position": [
+            -0.002883598208427429,
+            -7.624753432337329,
+            -2.2621504196946356
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "sound": [],
+      "ground": {
+        "fade": 0.25,
+        "scale": 7.961952136282811,
+        "enable": false,
+        "opacity": 1,
+        "position": [
+          -0.002883598208427429,
+          -1.2551917233110796,
+          -2.2615938219240896
+        ],
+        "shadowMode": "ShadowCatcher",
+        "samplingRange": 0.6
+      },
+      "createdAt": "2022-10-19T11:07:20.062862",
+      "updatedAt": "2022-10-19T11:31:38.829757"
+    },
+    "preferOriginalNormalMap": false,
+    "inStore": false,
+    "isDisabled": false,
+    "displayStatus": "ok",
+    "visibility": "public",
+    "org": null,
+    "isArEnabled": false,
+    "version": {
+      "uid": "fff4a48b3606451a818e6d972dbebfc4",
+      "status": {
+        "processing": "SUCCEEDED"
+      },
+      "isCurrentVersion": true,
+      "isCandidateVersion": false,
+      "createdAt": "2022-10-19T11:07:20.062862",
+      "processedAt": "2022-10-19T11:07:34.274638",
+      "reason": "upload"
+    },
+    "soundCount": 0,
+    "useNewViewer": false,
+    "viewerType": "legacy",
+    "hasDoptions": false
+  },
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9/textures?optimized=1": {
+    "results": [
+      {
+        "uid": "7c2ceb8e67684f3da908eeb403dc73db",
+        "name": "TexturesCom_Fabric_SciFi2_512_normal.png",
+        "images": [
+          {
+            "uid": "28f72d89662049cc986361c5a3c029da",
+            "size": 4773,
+            "width": 64,
+            "height": 64,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/7c2ceb8e67684f3da908eeb403dc73db/28f72d89662049cc986361c5a3c029da.jpeg",
+            "options": {
+              "format": "N",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:06.080465",
+            "updatedAt": "2022-10-19T11:28:06.029125",
+            "pk": 36910,
+            "pv": 1
+          },
+          {
+            "uid": "45436e65cd9a43b0bf8adb585b751a41",
+            "size": 12998,
+            "width": 128,
+            "height": 128,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/7c2ceb8e67684f3da908eeb403dc73db/45436e65cd9a43b0bf8adb585b751a41.jpeg",
+            "options": {
+              "format": "N",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:05.986436",
+            "updatedAt": "2022-10-19T11:28:05.950977",
+            "pk": 36910,
+            "pv": 1
+          },
+          {
+            "uid": "8d60532fac154857a5fcbea010fc2503",
+            "size": 70110,
+            "width": 256,
+            "height": 256,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/7c2ceb8e67684f3da908eeb403dc73db/8d60532fac154857a5fcbea010fc2503.jpeg",
+            "options": {
+              "format": "N",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:05.907421",
+            "updatedAt": "2022-10-19T11:28:05.845123",
+            "pk": 36910,
+            "pv": 1
+          },
+          {
+            "uid": "5b82dbc2915847cb84e37101640da0c8",
+            "size": 322896,
+            "width": 512,
+            "height": 512,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/7c2ceb8e67684f3da908eeb403dc73db/5b82dbc2915847cb84e37101640da0c8.jpeg",
+            "options": {
+              "format": "N",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:05.777111",
+            "updatedAt": "2022-10-19T11:28:05.704871",
+            "pk": 36910,
+            "pv": 1
+          },
+          {
+            "uid": "38c6a16674e34e4795fab03123a76df5",
+            "size": 558413,
+            "width": 512,
+            "height": 512,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/7c2ceb8e67684f3da908eeb403dc73db/38c6a16674e34e4795fab03123a76df5.png",
+            "options": {},
+            "createdAt": "2022-10-19T11:25:25.443655",
+            "updatedAt": "2022-10-19T11:25:25.319034",
+            "pk": 36910,
+            "pv": 1
+          },
+          {
+            "uid": "3fbcebabe84f4595add7989610cf42f5",
+            "size": 1540,
+            "width": 32,
+            "height": 32,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/7c2ceb8e67684f3da908eeb403dc73db/3fbcebabe84f4595add7989610cf42f5.png",
+            "options": {},
+            "createdAt": "2022-10-19T11:25:25.176440",
+            "updatedAt": "2022-10-19T11:25:25.085764",
+            "pk": null,
+            "pv": null
+          }
+        ],
+        "colorSpace": "unknown",
+        "createdAt": "2022-10-19T11:25:21.685889",
+        "updatedAt": "2022-10-19T11:25:25.450652"
+      },
+      {
+        "uid": "cdd342672a194c8d9e745a71c27f606c",
+        "name": "TexturesCom_Ice_Cracked_1K_normal.png",
+        "images": [
+          {
+            "uid": "8dcdad298bb6431f9d8307f7b5d99a7c",
+            "size": 842,
+            "width": 64,
+            "height": 64,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/cdd342672a194c8d9e745a71c27f606c/8dcdad298bb6431f9d8307f7b5d99a7c.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:09.597761",
+            "updatedAt": "2022-10-19T11:28:09.530255",
+            "pk": 87150,
+            "pv": 1
+          },
+          {
+            "uid": "a310424df46d479e95ff019b34268bcd",
+            "size": 2532,
+            "width": 128,
+            "height": 128,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/cdd342672a194c8d9e745a71c27f606c/a310424df46d479e95ff019b34268bcd.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:09.489442",
+            "updatedAt": "2022-10-19T11:28:09.455876",
+            "pk": 87150,
+            "pv": 1
+          },
+          {
+            "uid": "f27029fd819a4a78b9ad3bf25b633cd0",
+            "size": 8818,
+            "width": 256,
+            "height": 256,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/cdd342672a194c8d9e745a71c27f606c/f27029fd819a4a78b9ad3bf25b633cd0.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:09.411502",
+            "updatedAt": "2022-10-19T11:28:09.345643",
+            "pk": 87150,
+            "pv": 1
+          },
+          {
+            "uid": "594efca96bf54bf7a2d4595656d96249",
+            "size": 33625,
+            "width": 512,
+            "height": 512,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/cdd342672a194c8d9e745a71c27f606c/594efca96bf54bf7a2d4595656d96249.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:09.302833",
+            "updatedAt": "2022-10-19T11:28:09.235784",
+            "pk": 87150,
+            "pv": 1
+          },
+          {
+            "uid": "5d6e708e13ed4f40a48f3ea52216334c",
+            "size": 83150,
+            "width": 1024,
+            "height": 1024,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/cdd342672a194c8d9e745a71c27f606c/5d6e708e13ed4f40a48f3ea52216334c.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 92
+            },
+            "createdAt": "2022-10-19T11:28:09.163819",
+            "updatedAt": "2022-10-19T11:28:09.123768",
+            "pk": 87150,
+            "pv": 1
+          },
+          {
+            "uid": "a7ed5c208a4c4be288cd78ee61e6c44c",
+            "size": 655937,
+            "width": 1024,
+            "height": 1024,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/cdd342672a194c8d9e745a71c27f606c/a7ed5c208a4c4be288cd78ee61e6c44c.png",
+            "options": {},
+            "createdAt": "2022-10-19T11:25:28.119742",
+            "updatedAt": "2022-10-19T11:25:28.018708",
+            "pk": 87150,
+            "pv": 1
+          },
+          {
+            "uid": "7b64c6ab212241da8dd8b6d83e8c56c8",
+            "size": 966,
+            "width": 32,
+            "height": 32,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/cdd342672a194c8d9e745a71c27f606c/7b64c6ab212241da8dd8b6d83e8c56c8.png",
+            "options": {},
+            "createdAt": "2022-10-19T11:25:27.909184",
+            "updatedAt": "2022-10-19T11:25:27.860689",
+            "pk": null,
+            "pv": null
+          }
+        ],
+        "colorSpace": "unknown",
+        "createdAt": "2022-10-19T11:25:21.994580",
+        "updatedAt": "2022-10-19T11:25:28.127522"
+      },
+      {
+        "uid": "e24f8d2d2aad4224bdd69fb6caf507e8",
+        "name": "TexturesCom_Fabric_SciFi2_512_albedo.png",
+        "images": [
+          {
+            "uid": "37a2930b59ca48fa950e313578eaa3bb",
+            "size": 1174,
+            "width": 64,
+            "height": 64,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/e24f8d2d2aad4224bdd69fb6caf507e8/37a2930b59ca48fa950e313578eaa3bb.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:05.941286",
+            "updatedAt": "2022-10-19T11:28:05.905913",
+            "pk": 253984,
+            "pv": 1
+          },
+          {
+            "uid": "383a0e1e47db4e7293b9d265d56fba38",
+            "size": 5168,
+            "width": 128,
+            "height": 128,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/e24f8d2d2aad4224bdd69fb6caf507e8/383a0e1e47db4e7293b9d265d56fba38.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:05.861653",
+            "updatedAt": "2022-10-19T11:28:05.825849",
+            "pk": 253984,
+            "pv": 1
+          },
+          {
+            "uid": "403830e47fab4d37b5f252f2a254dc37",
+            "size": 37274,
+            "width": 256,
+            "height": 256,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/e24f8d2d2aad4224bdd69fb6caf507e8/403830e47fab4d37b5f252f2a254dc37.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:05.785496",
+            "updatedAt": "2022-10-19T11:28:05.739745",
+            "pk": 253984,
+            "pv": 1
+          },
+          {
+            "uid": "b526ef5d26094ae9b1f14d5f30021090",
+            "size": 135029,
+            "width": 512,
+            "height": 512,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/e24f8d2d2aad4224bdd69fb6caf507e8/b526ef5d26094ae9b1f14d5f30021090.jpeg",
+            "options": {
+              "format": "RGB",
+              "quality": 95
+            },
+            "createdAt": "2022-10-19T11:28:05.659086",
+            "updatedAt": "2022-10-19T11:28:05.558976",
+            "pk": 253984,
+            "pv": 1
+          },
+          {
+            "uid": "7ed4c8cef1b349f2a54ebc1ca86c49f9",
+            "size": 206605,
+            "width": 512,
+            "height": 512,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/e24f8d2d2aad4224bdd69fb6caf507e8/7ed4c8cef1b349f2a54ebc1ca86c49f9.png",
+            "options": {},
+            "createdAt": "2022-10-19T11:25:23.644947",
+            "updatedAt": "2022-10-19T11:25:23.551341",
+            "pk": 253984,
+            "pv": 1
+          },
+          {
+            "uid": "bc18f6a3b37144f0a577537af24c803b",
+            "size": 412,
+            "width": 32,
+            "height": 32,
+            "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/textures/e24f8d2d2aad4224bdd69fb6caf507e8/bc18f6a3b37144f0a577537af24c803b.png",
+            "options": {},
+            "createdAt": "2022-10-19T11:25:23.447924",
+            "updatedAt": "2022-10-19T11:25:23.365313",
+            "pk": null,
+            "pv": null
+          }
+        ],
+        "colorSpace": "unknown",
+        "createdAt": "2022-10-19T11:25:20.930959",
+        "updatedAt": "2022-10-19T11:25:23.652679"
+      }
+    ],
+    "count": 3
+  },
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9/animations?optimized=1": {
+    "results": [
+      {
+        "uid": "afb3929f45c54e1e9878a861e3aa55a5",
+        "name": "Animation",
+        "url": "https://media.sketchfab.com/models/c987d91a61d849fab0a4fd7cb16335f9/fff4a48b3606451a818e6d972dbebfc4/animations/afb3929f45c54e1e9878a861e3aa55a5.bin.gz",
+        "size": 18264,
+        "duration": 5.0,
+        "isLoop": true,
+        "isEnabled": true,
+        "createdAt": "2022-10-19T11:07:34.270960",
+        "updatedAt": "2022-10-19T11:29:04.617572"
+      }
+    ],
+    "count": 1
+  },
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9/hotspots?optimized=1": {
+    "results": [],
+    "count": 0
+  },
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9/sounds?optimized=1": {
+    "results": [],
+    "count": 0
+  },
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9/backgrounds?optimized=1": {
+    "results": [
+      {
+        "uid": "3ef1bd11d3eb4b57a0b353e8f2e5fc3e",
+        "name": "dirty_dark",
+        "images": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "size": 210350,
+            "url": "https://media.sketchfab.com/backgrounds/3ef1bd11d3eb4b57a0b353e8f2e5fc3e/6250d36a03f640768db171988fef93d8.jpeg",
+            "createdAt": "2014-04-06T15:11:28",
+            "updatedAt": "2014-04-06T15:11:28"
+          },
+          {
+            "width": 1600,
+            "height": 900,
+            "size": 148079,
+            "url": "https://media.sketchfab.com/backgrounds/3ef1bd11d3eb4b57a0b353e8f2e5fc3e/869e99c271b1463c88ab96466aba0689.jpeg",
+            "createdAt": "2014-04-06T15:11:28",
+            "updatedAt": "2014-04-06T15:11:28"
+          },
+          {
+            "width": 640,
+            "height": 360,
+            "size": 14285,
+            "url": "https://media.sketchfab.com/backgrounds/3ef1bd11d3eb4b57a0b353e8f2e5fc3e/70ef488f050c485dbbd1ee3a718fcc66.jpeg",
+            "createdAt": "2014-04-06T15:11:29",
+            "updatedAt": "2014-04-06T15:11:29"
+          },
+          {
+            "width": 1024,
+            "height": 576,
+            "size": 49340,
+            "url": "https://media.sketchfab.com/backgrounds/3ef1bd11d3eb4b57a0b353e8f2e5fc3e/0c4d893ddeff4011a0bcc4093f64d321.jpeg",
+            "createdAt": "2014-04-06T15:11:29",
+            "updatedAt": "2014-04-06T15:11:29"
+          },
+          {
+            "width": 1280,
+            "height": 720,
+            "size": 87320,
+            "url": "https://media.sketchfab.com/backgrounds/3ef1bd11d3eb4b57a0b353e8f2e5fc3e/e5594eaa96e44ccba597c00f9c2d0dc7.jpeg",
+            "createdAt": "2014-04-06T15:11:29",
+            "updatedAt": "2014-04-06T15:11:29"
+          },
+          {
+            "width": 480,
+            "height": 270,
+            "size": 7119,
+            "url": "https://media.sketchfab.com/backgrounds/3ef1bd11d3eb4b57a0b353e8f2e5fc3e/909220e99a424ac1a1689cfd2dc8660f.jpeg",
+            "createdAt": "2014-04-06T15:11:29",
+            "updatedAt": "2014-04-06T15:11:29"
+          },
+          {
+            "width": 1366,
+            "height": 768,
+            "size": 102053,
+            "url": "https://media.sketchfab.com/backgrounds/3ef1bd11d3eb4b57a0b353e8f2e5fc3e/c3b133399cd24226a5f3c734dcd54dd6.jpeg",
+            "createdAt": "2014-04-06T15:11:29",
+            "updatedAt": "2014-04-06T15:11:29"
+          }
+        ],
+        "createdAt": "2014-04-06T15:11:28",
+        "updatedAt": "2020-10-01T15:27:26.375876",
+        "isDefault": true
+      }
+    ],
+    "count": 1
+  },
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9/environments?optimized=1": {
+    "results": [
+      {
+        "uid": "cd5e5b1607d844cdb928e96ff9c36b5c",
+        "name": "Queen Mary Chimney",
+        "isDefault": true,
+        "diffuseSPH": [
+          0.407157,
+          0.30877,
+          0.511943,
+          -0.0681525,
+          -0.0060932,
+          -0.0252958,
+          0.0614482,
+          -0.0792382,
+          -0.178105,
+          0.239462,
+          0.18719,
+          0.331292,
+          -0.0729155,
+          -0.0371452,
+          -0.0657029,
+          -0.0245562,
+          0.0121173,
+          0.03098,
+          -0.00690822,
+          -0.00636112,
+          -0.0104025,
+          0.0263494,
+          -0.0512496,
+          -0.114131,
+          0.0525793,
+          0.0551197,
+          0.102995,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.00776173,
+          0.00735122,
+          0.0138426,
+          0.00463991,
+          -0.0081343,
+          -0.0181749,
+          0.00711791,
+          0.00330164,
+          0.00620538,
+          -0.00247398,
+          0.00107218,
+          0.00285042,
+          0.00690244,
+          0.00346951,
+          0.00699056,
+          -0.000972766,
+          -0.00763015,
+          -0.0152521,
+          -0.00596395,
+          -0.00479377,
+          -0.0095444,
+          0.00606204,
+          0.0069597,
+          0.0140459,
+          0.00210135,
+          -0.00354539,
+          -0.00726327
+        ],
+        "textures": [
+          {
+            "type": "thumbnail",
+            "format": "panorama",
+            "images": [
+              {
+                "uid": "8fe90f7d8f664afba7be1c43dd0bfc5a",
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/11c21105711d4ac2ab0b10ece5e7f4e0.jpg",
+                "name": "thumbnail_256.jpg",
+                "width": 256,
+                "height": 128
+              }
+            ],
+            "encoding": "srgb"
+          },
+          {
+            "type": "background",
+            "format": "cubemap",
+            "images": [
+              {
+                "uid": "a4784cb2cc944d0db80c9f545fe0c9ea",
+                "blur": 0.15,
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/7c9b8b4b702c4486807b7c08d2891392.bin.gz",
+                "name": "background_cubemap_64_0.15_luv.bin.gz",
+                "width": 64,
+                "height": 64,
+                "samples": 512,
+                "sizeCompressed": 48272,
+                "sizeUncompressed": 98304
+              },
+              {
+                "uid": "7476122645e7404e9fab03bb9f17188c",
+                "blur": 0.1,
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/1aa20c032ce94d97b45838211547865a.bin.gz",
+                "name": "background_cubemap_128_0.1_luv.bin.gz",
+                "width": 128,
+                "height": 128,
+                "samples": 512,
+                "sizeCompressed": 163922,
+                "sizeUncompressed": 393216
+              },
+              {
+                "uid": "24ce662953214e5fb438be5c8cdc5eff",
+                "blur": 0.055,
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/3eaa4fa0173e4fae8d6707028456ebdd.bin.gz",
+                "name": "background_cubemap_256_0.055_luv.bin.gz",
+                "width": 256,
+                "height": 256,
+                "samples": 512,
+                "sizeCompressed": 560432,
+                "sizeUncompressed": 1572864
+              },
+              {
+                "uid": "1cc953e2438d4086866c93a2249aa81d",
+                "blur": 0.02,
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/b4a672c4eeb0470d834771be56be71aa.bin.gz",
+                "name": "background_cubemap_512_0.02_luv.bin.gz",
+                "width": 512,
+                "height": 512,
+                "samples": 512,
+                "sizeCompressed": 2151853,
+                "sizeUncompressed": 6291456
+              },
+              {
+                "uid": "c3ce078e02f44471b8e6be95004e68eb",
+                "blur": 0.0,
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/37b07eb36b524c19aef3358a532fe998.bin.gz",
+                "name": "background_cubemap_512_0.0_luv.bin.gz",
+                "width": 512,
+                "height": 512,
+                "samples": 512,
+                "sizeCompressed": 3052143,
+                "sizeUncompressed": 6291456
+              }
+            ],
+            "encoding": "luv"
+          },
+          {
+            "type": "specular_ue4",
+            "format": "panorama",
+            "images": [
+              {
+                "uid": "7eb10480d14d44e8906d8f945796922d",
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/28735a769e564726b859d0f2604abb5e.bin.gz",
+                "name": "specular_panorama_ue4_1024_luv.bin.gz",
+                "width": 1024,
+                "height": 1024,
+                "samples": 1024,
+                "sizeCompressed": 1203494,
+                "sizeUncompressed": 4194304
+              },
+              {
+                "uid": "d0b3ff64477948ecb097c9d39760aff2",
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/0e7174b7fdeb4a2d87357f7767d251e7.bin.gz",
+                "name": "specular_panorama_ue4_256_luv.bin.gz",
+                "width": 256,
+                "height": 256,
+                "samples": 1024,
+                "sizeCompressed": 88156,
+                "sizeUncompressed": 262144
+              }
+            ],
+            "encoding": "luv",
+            "limitSize": 32
+          },
+          {
+            "type": "specular_ue4",
+            "format": "cubemap",
+            "images": [
+              {
+                "uid": "45570f2c22864eaca54689087a217dbf",
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/2123ce582dec4729b72399817599176c.bin.gz",
+                "name": "specular_cubemap_ue4_256_luv.bin.gz",
+                "width": 256,
+                "height": 256,
+                "samples": 1024,
+                "sizeCompressed": 1091203,
+                "sizeUncompressed": 2097144
+              },
+              {
+                "uid": "eb655a1589a949ac8362b3cd3a29d075",
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/c702c40f3d2a4c14a0882cdab274f196.bin.gz",
+                "name": "specular_cubemap_ue4_64_luv.bin.gz",
+                "width": 64,
+                "height": 64,
+                "samples": 1024,
+                "sizeCompressed": 80941,
+                "sizeUncompressed": 131064
+              }
+            ],
+            "encoding": "luv",
+            "limitSize": 8
+          },
+          {
+            "type": "brdf_ue4",
+            "format": "lut",
+            "images": [
+              {
+                "uid": "8c00cf18064b4e779dc4a2f79ebe5887",
+                "file": "https://media.sketchfab.com/environments/cd5e5b1607d844cdb928e96ff9c36b5c/27c0904318e343b992c52ff368ed1a4a.bin.gz",
+                "name": "brdf_ue4.bin.gz",
+                "width": 128,
+                "height": 128,
+                "samples": 1024,
+                "sizeCompressed": 59987,
+                "sizeUncompressed": 65536
+              }
+            ],
+            "encoding": "rg16"
+          }
+        ],
+        "processing": "Succeeded",
+        "brightness": 3.9605,
+        "lights": [
+          {
+            "sum": 0.3315,
+            "area": {
+              "h": 0.0664062,
+              "w": 0.0722656,
+              "x": 0.370117,
+              "y": 0.411133
+            },
+            "color": [
+              2.31228,
+              3.93207,
+              8.24153
+            ],
+            "error": 0,
+            "variance": 1.84715e-05,
+            "direction": [
+              0.700259,
+              -0.275572,
+              0.658558
+            ],
+            "lum_ratio": 0.271914,
+            "luminosity": 74.7212
+          }
+        ]
+      }
+    ],
+    "count": 1
+  },
+  "/i/models/c987d91a61d849fab0a4fd7cb16335f9/matcaps?optimized=1": {
+    "results": [
+      {
+        "uid": "43a40dd3e9c34fc0b7da9cbf07b82ac8",
+        "name": "metal.png",
+        "images": [
+          {
+            "width": 1024,
+            "height": 1024,
+            "size": 37249,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/2c08715b53aa4d0184bd40589b88bb7a.jpeg",
+            "createdAt": "2017-06-13T10:42:18.575615",
+            "updatedAt": "2017-06-13T10:42:18.575629"
+          },
+          {
+            "width": 1024,
+            "height": 1024,
+            "size": 37249,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/e6f59dec94594d51ab1edd74ed75bac5.jpeg",
+            "createdAt": "2017-06-13T10:42:18.211446",
+            "updatedAt": "2017-06-13T10:42:18.211458"
+          },
+          {
+            "width": 512,
+            "height": 512,
+            "size": 13185,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/06976fbe40944f1aa0a4f1146e02d064.jpeg",
+            "createdAt": "2017-06-13T10:42:18.132783",
+            "updatedAt": "2017-06-13T10:42:18.132795"
+          },
+          {
+            "width": 512,
+            "height": 512,
+            "size": 13185,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/3d9326e3e9bd47419353550cd0e22175.jpeg",
+            "createdAt": "2017-06-13T10:42:18.018176",
+            "updatedAt": "2017-06-13T10:42:18.018188"
+          },
+          {
+            "width": 256,
+            "height": 256,
+            "size": 5182,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/be9d6e4a392a4b1a93431c895d59edec.jpeg",
+            "createdAt": "2017-06-13T10:42:17.907488",
+            "updatedAt": "2017-06-13T10:42:17.907503"
+          },
+          {
+            "width": 256,
+            "height": 256,
+            "size": 5802,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/7a9b1337041041a1aa378c07b1503a91.jpeg",
+            "createdAt": "2017-06-13T10:42:17.756153",
+            "updatedAt": "2017-06-13T10:42:17.756171"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "size": 2090,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/d374d6bc98f24284b584368426f6ec73.jpeg",
+            "createdAt": "2017-06-13T10:42:17.693979",
+            "updatedAt": "2017-06-13T10:42:17.693992"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "size": 956,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/39e5f04d945b4970baa87988e00c683e.jpeg",
+            "createdAt": "2017-06-13T10:42:17.497738",
+            "updatedAt": "2017-06-13T10:42:17.497753"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "size": 2468,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/2b1e83688e1145a1a337abd439a54dde.jpeg",
+            "createdAt": "2017-06-13T10:42:17.450627",
+            "updatedAt": "2017-06-13T10:42:17.450639"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "size": 1278,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/928f27d223574a18bc3122b6f88f4d54.jpeg",
+            "createdAt": "2017-06-13T10:42:17.236928",
+            "updatedAt": "2017-06-13T10:42:17.236940"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "size": 856,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/23bde41abc30449d89f6803d1ce8693a.jpeg",
+            "createdAt": "2017-06-13T10:42:16.958799",
+            "updatedAt": "2017-06-13T10:42:16.958825"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "size": 856,
+            "url": "https://media.sketchfab.com/matcaps/43a40dd3e9c34fc0b7da9cbf07b82ac8/d0c3a4aaf8744d608f0f425abd3474a3.jpeg",
+            "createdAt": "2017-06-13T10:42:16.929709",
+            "updatedAt": "2017-06-13T10:42:16.929721"
+          }
+        ],
+        "createdAt": "2017-06-13T10:42:15.630044",
+        "updatedAt": "2020-10-01T14:52:44.793250",
+        "isDefault": true
+      },
+      {
+        "uid": "35c4d334eded44d8a657f390954a32dd",
+        "name": "skin_soft.png",
+        "images": [
+          {
+            "width": 1024,
+            "height": 1024,
+            "size": 27120,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/a77379e6fc3145a998102df4cccf2332.jpeg",
+            "createdAt": "2017-06-13T10:42:27.152098",
+            "updatedAt": "2017-06-13T10:42:27.152111"
+          },
+          {
+            "width": 512,
+            "height": 512,
+            "size": 9631,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/a3e162e6e0524a5097410bdc03154d3c.jpeg",
+            "createdAt": "2017-06-13T10:42:26.895368",
+            "updatedAt": "2017-06-13T10:42:26.895382"
+          },
+          {
+            "width": 1024,
+            "height": 1024,
+            "size": 27120,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/e7035fc0cfc84ae0bfe9df4a7703bfae.jpeg",
+            "createdAt": "2017-06-13T10:42:26.628241",
+            "updatedAt": "2017-06-13T10:42:26.628273"
+          },
+          {
+            "width": 256,
+            "height": 256,
+            "size": 3800,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/57290d088562432f896dd6bf10519bbb.jpeg",
+            "createdAt": "2017-06-13T10:42:26.609339",
+            "updatedAt": "2017-06-13T10:42:26.609353"
+          },
+          {
+            "width": 512,
+            "height": 512,
+            "size": 11313,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/e895d660f71249d2a4ea1114dcf6348d.jpeg",
+            "createdAt": "2017-06-13T10:42:26.445156",
+            "updatedAt": "2017-06-13T10:42:26.445170"
+          },
+          {
+            "width": 256,
+            "height": 256,
+            "size": 4424,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/23a7755128a74912b9fb9317ebedcbe6.jpeg",
+            "createdAt": "2017-06-13T10:42:26.274657",
+            "updatedAt": "2017-06-13T10:42:26.274671"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "size": 1608,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/f69430ab5cfa40ecab7a1ca115206ac8.jpeg",
+            "createdAt": "2017-06-13T10:42:26.147615",
+            "updatedAt": "2017-06-13T10:42:26.147628"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "size": 2002,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/e3f7ee638dbb4c0295b9b82aa63e3186.jpeg",
+            "createdAt": "2017-06-13T10:42:26.109007",
+            "updatedAt": "2017-06-13T10:42:26.109022"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "size": 1141,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/cc47a38e76914f42ba20fe208e7520ea.jpeg",
+            "createdAt": "2017-06-13T10:42:25.943279",
+            "updatedAt": "2017-06-13T10:42:25.943292"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "size": 1141,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/1bda0b59fe6c456988f3a9465379e6de.jpeg",
+            "createdAt": "2017-06-13T10:42:25.858227",
+            "updatedAt": "2017-06-13T10:42:25.858241"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "size": 815,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/48f1c7b4b72b44639d1c5b4f76c24b1b.jpeg",
+            "createdAt": "2017-06-13T10:42:25.775409",
+            "updatedAt": "2017-06-13T10:42:25.775423"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "size": 815,
+            "url": "https://media.sketchfab.com/matcaps/35c4d334eded44d8a657f390954a32dd/24aa2c3128f24b90b3d3e71a49b825e2.jpeg",
+            "createdAt": "2017-06-13T10:42:25.593726",
+            "updatedAt": "2017-06-13T10:42:25.593739"
+          }
+        ],
+        "createdAt": "2017-06-13T10:42:24.132261",
+        "updatedAt": "2020-10-01T14:52:54.748044",
+        "isDefault": true
+      }
+    ],
+    "count": 2
+  },
+  "embedOptions": {
+    "allowSwiftShader": false,
+    "animationAutoplay": true,
+    "anisotropy": true,
+    "annotation": 0,
+    "annotationCycle": null,
+    "annotationsVisible": null,
+    "annotationTooltipVisible": true,
+    "apiHookEnv": null,
+    "apiLog": null,
+    "apiVersion": null,
+    "arkit": false,
+    "arkitDebug": false,
+    "asyncImage": false,
+    "asyncShader": 1,
+    "autoMaterial": 0,
+    "autospin": 0,
+    "autostart": true,
+    "camera": true,
+    "cameraConstraints": true,
+    "cameraEasing": null,
+    "cameraEye": null,
+    "cameraFollowBones": 0,
+    "cameraTarget": null,
+    "cardboard": 0,
+    "carmel": false,
+    "cleanShader": false,
+    "continuousRender": false,
+    "convertVertexColor8Bit": true,
+    "debug3D": false,
+    "debugDecals": false,
+    "depthMipmap": 0,
+    "dnt": false,
+    "dofAttenuateDistance": true,
+    "dofAttenuateSpeed": false,
+    "dofCircle": true,
+    "dofRes": 2,
+    "dofSticky": false,
+    "dofTransition": true,
+    "doubleClick": true,
+    "downloadPicture": false,
+    "drs": true,
+    "drsRatio": 1.0,
+    "drsFps": 15,
+    "drsMin": null,
+    "drsTest": false,
+    "epsilonAlpha": 1e-05,
+    "floatRtt": 2,
+    "forceController": "",
+    "forceControllerOrientation": -0.5,
+    "forceControllerRayOrientation": -0.075,
+    "forceFallback": false,
+    "forceMs": 0,
+    "forceTriangles": null,
+    "fpsSpeed": 5,
+    "fxaa": null,
+    "grainSpeed": 64,
+    "graphOptimizer": null,
+    "imageCompression": null,
+    "internal": true,
+    "isApp": false,
+    "keepEmptyGeometries": false,
+    "materialAo": null,
+    "materialCavity": null,
+    "materialDiffuse": null,
+    "materialDisplacement": null,
+    "materialDisplacementFactor": null,
+    "materialEmissive": null,
+    "materialF0": null,
+    "materialGlossiness": null,
+    "materialMetalness": null,
+    "materialNames": "main_material",
+    "materialNormal": null,
+    "materialPacking": null,
+    "materialRoughness": null,
+    "materialShowcase": false,
+    "materialSpecular": null,
+    "materialTransparency": null,
+    "maxTextureUnits": 32,
+    "maxDevicePixelRatio": 1.5,
+    "maxTextureSize": 8192,
+    "maxVertexUniforms": 8192,
+    "mergeMaterials": null,
+    "messaging": null,
+    "model": null,
+    "modelOptimization": null,
+    "morphEpsilon": 0.05,
+    "morphGpu": 4,
+    "navigation": "orbit",
+    "orbitConstraintPan": null,
+    "orbitConstraintPitchDown": null,
+    "orbitConstraintPitchUp": null,
+    "orbitConstraintYawLeft": null,
+    "orbitConstraintYawRight": null,
+    "orbitConstraintZoomIn": null,
+    "orbitConstraintZoomOut": null,
+    "orbitPanFactor": 1.0,
+    "orbitRotationFactor": 1.0,
+    "orbitZoomFactor": 1.0,
+    "panorama": false,
+    "pixelBudget": null,
+    "pratio": null,
+    "postProcess": null,
+    "postProcessAscii": null,
+    "powerPreference": "high-performance",
+    "preload": false,
+    "preserveDrawingBuffer": false,
+    "preventUserLightRotation": null,
+    "processMaterial": false,
+    "processOptions": false,
+    "quality": null,
+    "refractionRes": 1,
+    "resizeTimeout": 1000,
+    "rgbm": true,
+    "scale": 1.0,
+    "scaleEpsilon": 1e-05,
+    "scrollwheel": true,
+    "shadow": true,
+    "shadowAtlas": true,
+    "shadowJitterOffset": "default",
+    "shadowNormalOffset": false,
+    "shadowPCF": "1Tap(4texFetch)",
+    "shadowTextureSize": 1024,
+    "share": false,
+    "singleSided": null,
+    "snapKeyframe": false,
+    "soundEnable": true,
+    "soundMute": false,
+    "soundPreload": false,
+    "splitLimit": 65535,
+    "ssaoNormal": false,
+    "ssr": null,
+    "ssrTransparent": false,
+    "sssJitter": 1.0,
+    "sssKernel": 17,
+    "stats": false,
+    "svgSize": 2048,
+    "substanceDisplacement": false,
+    "supersample": true,
+    "tracking": false,
+    "taa": null,
+    "taaAnimation": false,
+    "taaFeedbackMax": 0.97,
+    "taaFeedbackMin": 0.88,
+    "taaJitter": null,
+    "taaTransparent": null,
+    "tab": null,
+    "textureFrameBudget": 512,
+    "transparent": false,
+    "uiAnimations": true,
+    "uiAnnotations": true,
+    "uiAr": false,
+    "uiArHelp": true,
+    "uiArQrcode": true,
+    "uiColor": "",
+    "uiControls": true,
+    "uiFadeout": true,
+    "uiFullscreen": true,
+    "uiGeneralControls": true,
+    "uiHelp": true,
+    "uiHint": 1,
+    "uiInfos": false,
+    "uiInspector": true,
+    "uiInspectorOpen": false,
+    "uiLoading": true,
+    "uiSettings": true,
+    "uiSnapshots": false,
+    "uiSound": true,
+    "uiStart": true,
+    "uiStop": false,
+    "uiTheatre": true,
+    "uiTheme": null,
+    "uiVr": true,
+    "uiWatermark": false,
+    "uiWatermarkLink": true,
+    "unitRenderLocal": false,
+    "unitRenderReporter": "html",
+    "unitRenderTask": null,
+    "useVao": true,
+    "varyingSorting": true,
+    "vrAr": false,
+    "vrBrowserEnv": "c0022acc4f3242e2bcae8043e08df8cc",
+    "vrFade": 200,
+    "vrLauncherAlphaCardFactor": 1,
+    "vrMirror": false,
+    "vrMobileMaxFaces": 50000,
+    "vrQuality": null,
+    "vrGenerateUiTextures": true,
+    "vrForceRaf": false,
+    "vrLinkNavigation": 0,
+    "vrInNavigation": 0,
+    "vrScaleRtt": 0,
+    "vrMaxRttSize": null,
+    "vrStereo": true,
+    "webgl2": true,
+    "webglExt": true,
+    "webglRenderTexture": null,
+    "webglRestore": 3,
+    "webglTimerGpu": false,
+    "webglUniforms": false,
+    "wireframePreload": null,
+    "zoct": false,
+    "zq": true,
+    "zw": true,
+    "zratio": 50,
+    "zz": null,
+    "allowDownload": false,
+    "inStore": false,
+    "displayStatus": "ok"
+  }
+}
