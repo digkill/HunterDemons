@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://duljhej3qe3ej"]
 
-[ext_resource type="PackedScene" uid="uid://d0hmqpc6hl0xv" path="res://assets/location/Vilage/Vilgae.gltf" id="1_ru7ng"]
+[ext_resource type="PackedScene" uid="uid://nihhrhbuwsm7" path="res://assets/Stylized Japanese Market Game-Ready Env/Stylized Japanese Market Game-Ready Env.gltf" id="1_ru7ng"]
 [ext_resource type="Script" uid="uid://bopqymxabcpnw" path="res://scripts/levels/InteractablePoint.gd" id="2_2ustx"]
 [ext_resource type="Script" uid="uid://bf6vsbne0n1e3" path="res://scripts/levels/VillageLevel.gd" id="script_village_level"]
+[ext_resource type="PackedScene" path="res://assets/6k Stylized Cloudy Skybox 002/6k Stylized Cloudy Skybox 002.gltf" id="skybox_day"]
+[ext_resource type="PackedScene" path="res://assets/Portal effect/Portal effect.gltf" id="portal_effect_gltf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r552y"]
 sky_top_color = Color(0.55, 0.72, 0.9, 1)
@@ -17,7 +19,7 @@ sky_material = SubResource("ProceduralSkyMaterial_r552y")
 background_mode = 2
 sky = SubResource("Sky_yugd3")
 ambient_light_source = 3
-ambient_light_energy = 1.1
+ambient_light_energy = 2.5
 tonemap_mode = 2
 fog_enabled = true
 fog_light_color = Color(0.72, 0.65, 0.55, 1)
@@ -122,6 +124,8 @@ shadow_enabled = true
 transform = Transform3D(-0.9396926, 0.14454399, -0.30997556, 0, 0.90630776, 0.42261827, 0.3420202, 0.39713126, -0.8516507, 0, 0, 0)
 light_energy = 0.35
 
+[node name="DaySkybox" type="Node3D" parent="." instance=ExtResource("skybox_day")]
+
 [node name="GroundCollision" type="StaticBody3D" parent="." unique_id=1782574585]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GroundCollision" unique_id=655720894]
@@ -153,6 +157,9 @@ mesh = SubResource("BoxMesh_18yj2")
 transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -2.0383487, 1.65, 19.175259)
 material_override = SubResource("StandardMaterial3D_wtuy1")
 mesh = SubResource("PlaneMesh_b4a5l")
+
+[node name="PortalEffect" parent="Gate" unique_id=1234567890 instance=ExtResource("portal_effect_gltf")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -2.0383487, 1.65, 18.975258)
 
 [node name="Interactables" type="Node3D" parent="." unique_id=1714920669]
 

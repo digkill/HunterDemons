@@ -39,9 +39,94 @@ func _configure_scene() -> void:
 	var model := get_node_or_null("VillageModel")
 	if model != null:
 		_generate_collision(model)
+		_fix_village_materials(model)
+	_configure_day_skybox()
+	_configure_portal_effect()
 	var gate_label := get_node_or_null("Interactables/BattleGate/GateLevelLabel") as Label3D
 	if gate_label != null:
 		gate_label.text = "К бою: %s" % LevelData.LEVELS[level_index]["name"]
+
+func _configure_portal_effect() -> void:
+	var portal := get_node_or_null("Gate/PortalEffect")
+	if portal == null:
+		return
+	var anim_player := portal.find_child("AnimationPlayer", true, false) as AnimationPlayer
+	if anim_player != null:
+		var anim := anim_player.get_animation("Animation")
+		if anim != null:
+			anim.loop_mode = Animation.LOOP_LINEAR
+		anim_player.play("Animation")
+	_make_portal_unshaded(portal)
+
+func _make_portal_unshaded(node: Node) -> void:
+	if node is MeshInstance3D:
+		var mesh_node := node as MeshInstance3D
+		if mesh_node.mesh != null:
+			for surface in range(mesh_node.mesh.get_surface_count()):
+				var mat := mesh_node.get_active_material(surface)
+				if mat is BaseMaterial3D:
+					var dup := mat.duplicate() as BaseMaterial3D
+					dup.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+					dup.cull_mode = BaseMaterial3D.CULL_DISABLED
+					mesh_node.set_surface_override_material(surface, dup)
+	for child in node.get_children():
+		_make_portal_unshaded(child)
+
+func _fix_village_materials(node: Node) -> void:
+	if node is MeshInstance3D:
+		var mesh_node := node as MeshInstance3D
+		if mesh_node.mesh != null:
+			var is_foliage := false
+			for surface in range(mesh_node.mesh.get_surface_count()):
+				var mat := mesh_node.get_active_material(surface)
+				if mat is BaseMaterial3D:
+					var bmat := mat as BaseMaterial3D
+					var dup: BaseMaterial3D = null
+					var changed := false
+
+					if bmat.transparency == BaseMaterial3D.TRANSPARENCY_ALPHA:
+						is_foliage = true
+						dup = bmat.duplicate() as BaseMaterial3D
+						dup.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+						dup.alpha_scissor_threshold = 0.4
+						changed = true
+
+					# Aggressively disable AO on the entire stylized environment model.
+					# The baked AO maps are too dark and create ugly black splotches
+					# that don't match the bright painted art style.
+					if bmat.ao_enabled or bmat.ao_light_affect > 0.0 or bmat.ao_texture != null:
+						if dup == null:
+							dup = bmat.duplicate() as BaseMaterial3D
+						dup.ao_enabled = false
+						dup.ao_texture = null
+						dup.ao_light_affect = 0.0
+						changed = true
+
+					if changed and dup != null:
+						mesh_node.set_surface_override_material(surface, dup)
+
+			if is_foliage:
+				mesh_node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	for child in node.get_children():
+		_fix_village_materials(child)
+
+func _configure_day_skybox() -> void:
+	var skybox := get_node_or_null("DaySkybox") as Node3D
+	if skybox == null:
+		return
+	for node in skybox.find_children("*", "MeshInstance3D", true, false):
+		var mesh_node := node as MeshInstance3D
+		mesh_node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		if mesh_node.mesh == null:
+			continue
+		for surface in mesh_node.mesh.get_surface_count():
+			var source := mesh_node.get_active_material(surface) as StandardMaterial3D
+			if source == null:
+				continue
+			var material := source.duplicate() as StandardMaterial3D
+			material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+			material.cull_mode = BaseMaterial3D.CULL_DISABLED
+			mesh_node.set_surface_override_material(surface, material)
 
 func _generate_collision(node: Node) -> void:
 	for child in node.get_children():
@@ -76,6 +161,7 @@ func _spawn_player() -> void:
 	var rig := CameraRigScene.instantiate() as CameraRig
 	rig.target = player
 	add_child(rig)
+	player.camera_rig = rig
 
 func _build_hud() -> void:
 	hud = VillageHUDScene.instantiate() as VillageHUD

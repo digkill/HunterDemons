@@ -11,6 +11,16 @@ const IceDemonScene := preload("res://scenes/characters/IceDemon.tscn")
 const TankDemonScene := preload("res://scenes/characters/TankDemon.tscn")
 const CameraRigScene := preload("res://scenes/player/CameraRig.tscn")
 const HUDScene := preload("res://scenes/ui/HUD.tscn")
+const CYBER_CITY_PATH := "res://assets/Cyberpunk City/Cyberpunk City.gltf"
+const CITY_SKYBOX_PATH := "res://assets/Anime Starry Night/Anime Starry Night.gltf"
+const CITY_COLLISION_LAYER := 1 << 1
+const DEMON_SPAWN_INTERVAL := 0.28
+# Исходный AABB города: ~42×21×24 м. Масштаб увеличен ещё вдвое.
+const CYBER_CITY_SCALE := 12.0
+# Центрирование AABB + подъём города над ареной на 3 м.
+const CYBER_CITY_POSITION := Vector3(-26.46, 4.144, 4.128)
+# Видимая дорожная поверхность находится на высоте корня сцены города.
+const CYBER_CITY_FLOOR_Y := 4.144
 
 var level_index := 0
 var data: Dictionary = {}
@@ -19,7 +29,13 @@ var hud: HUD
 
 var _wave_index := -1
 var _alive := 0
+var _pending_spawns := 0
+var _next_wave_queued := false
 var _rng := RandomNumberGenerator.new()
+var _cyber_city: Node3D
+var _cyber_city_floor: StaticBody3D
+var _city_skybox: Node3D
+var _floor_y := 0.0
 
 func _init(index := 0) -> void:
 	setup(index)
@@ -41,16 +57,22 @@ func _ready() -> void:
 	get_tree().create_timer(1.2, false).timeout.connect(_next_wave)
 
 func _configure_environment() -> void:
-	var sky_mat := ProceduralSkyMaterial.new()
-	sky_mat.sky_top_color = data["sky_top"]
-	sky_mat.sky_horizon_color = data["sky_horizon"]
-	sky_mat.ground_bottom_color = data["ground_color"].darkened(0.5)
-	sky_mat.ground_horizon_color = data["sky_horizon"]
-	var sky := Sky.new()
-	sky.sky_material = sky_mat
 	var env := Environment.new()
-	env.background_mode = Environment.BG_SKY
-	env.sky = sky
+	var is_city: bool = data["style"] == "city"
+	if is_city:
+		# Ночное небо берётся из Anime Starry Night, процедурный фон отключён.
+		env.background_mode = Environment.BG_COLOR
+		env.background_color = Color(0.01, 0.005, 0.03)
+	else:
+		var sky_mat := ProceduralSkyMaterial.new()
+		sky_mat.sky_top_color = data["sky_top"]
+		sky_mat.sky_horizon_color = data["sky_horizon"]
+		sky_mat.ground_bottom_color = data["ground_color"].darkened(0.5)
+		sky_mat.ground_horizon_color = data["sky_horizon"]
+		var sky := Sky.new()
+		sky.sky_material = sky_mat
+		env.background_mode = Environment.BG_SKY
+		env.sky = sky
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
 	env.ambient_light_energy = 1.0
 	env.fog_enabled = true
@@ -85,17 +107,103 @@ func _select_decor() -> void:
 		return
 	for child in decor_root.get_children():
 		if child is Node3D:
-			child.visible = str(child.name).to_snake_case() == data["style"]
+			# Первый уровень использует готовую сцену, а не старые процедурные коробки.
+			child.visible = str(child.name).to_snake_case() == data["style"] and child.name != "City"
+	var is_city: bool = data["style"] == "city"
+	_floor_y = CYBER_CITY_FLOOR_Y if is_city else 0.0
+	_set_cyber_city_visible(is_city)
+	_set_city_skybox_visible(is_city)
+
+func _set_city_skybox_visible(visible: bool) -> void:
+	if _city_skybox == null:
+		if not visible:
+			return
+		var scene := load(CITY_SKYBOX_PATH) as PackedScene
+		if scene == null:
+			push_error("Не загрузился skybox города: " + CITY_SKYBOX_PATH)
+			return
+		_city_skybox = scene.instantiate() as Node3D
+		_city_skybox.name = "AnimeStarryNightSkybox"
+		add_child(_city_skybox)
+		_configure_city_skybox()
+	_city_skybox.visible = visible
+
+func _configure_city_skybox() -> void:
+	for node in _city_skybox.find_children("*", "MeshInstance3D", true, false):
+		var mesh_node := node as MeshInstance3D
+		mesh_node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		if mesh_node.mesh == null:
+			continue
+		for surface in mesh_node.mesh.get_surface_count():
+			var source := mesh_node.get_active_material(surface) as StandardMaterial3D
+			if source == null:
+				continue
+			var material := source.duplicate() as StandardMaterial3D
+			material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+			material.cull_mode = BaseMaterial3D.CULL_DISABLED
+			mesh_node.set_surface_override_material(surface, material)
+
+func _set_cyber_city_visible(visible: bool) -> void:
+	if _cyber_city == null:
+		if not visible:
+			return
+		var scene := load(CYBER_CITY_PATH) as PackedScene
+		if scene == null:
+			push_error("Не загрузилась сцена города: " + CYBER_CITY_PATH)
+			return
+		_cyber_city = scene.instantiate() as Node3D
+		_cyber_city.name = "CyberpunkCity"
+		_cyber_city.scale = Vector3.ONE * CYBER_CITY_SCALE
+		_cyber_city.position = CYBER_CITY_POSITION
+		add_child(_cyber_city)
+		_build_cyber_city_collisions()
+		_build_cyber_city_floor()
+	_cyber_city.visible = visible
+	if _cyber_city_floor != null:
+		_cyber_city_floor.visible = visible
+
+# Неподвижные здания используют StaticBody3D: это корректнее и дешевле, чем
+# RigidBody3D, и блокирует проход игрока/демонов через геометрию города.
+func _build_cyber_city_collisions() -> void:
+	for node in _cyber_city.find_children("*", "MeshInstance3D", true, false):
+		var mesh_node := node as MeshInstance3D
+		if mesh_node.mesh == null:
+			continue
+		var shape := mesh_node.mesh.create_trimesh_shape()
+		if shape == null:
+			continue
+		var body := StaticBody3D.new()
+		body.name = "PlayerCityCollision"
+		body.collision_layer = CITY_COLLISION_LAYER
+		body.collision_mask = 0
+		var collision := CollisionShape3D.new()
+		collision.shape = shape
+		body.add_child(collision)
+		mesh_node.add_child(body)
+
+# У glTF-улицы нет надёжной игровой поверхности; отдельный статический пол
+# удерживает персонажей на уровне города, не добавляя лишнюю геометрию в кадр.
+func _build_cyber_city_floor() -> void:
+	_cyber_city_floor = StaticBody3D.new()
+	_cyber_city_floor.name = "CyberpunkCityFloor"
+	var collision := CollisionShape3D.new()
+	var shape := BoxShape3D.new()
+	shape.size = Vector3(90.0, 0.2, 90.0)
+	collision.shape = shape
+	collision.position.y = CYBER_CITY_FLOOR_Y - 0.1
+	_cyber_city_floor.add_child(collision)
+	add_child(_cyber_city_floor)
 
 func _spawn_player() -> void:
 	player = PlayerScene.instantiate()
 	add_child(player)
-	player.global_position = Vector3(0, 1.0, 4.0)
+	player.global_position = Vector3(0, _floor_y + 1.0, 4.0)
 	player.arena_half = ARENA_HALF
 	player.died.connect(_on_player_died)
 	var rig := CameraRigScene.instantiate() as CameraRig
 	rig.target = player
 	add_child(rig)
+	player.camera_rig = rig
 
 func _build_hud() -> void:
 	hud = HUDScene.instantiate() as HUD
@@ -104,6 +212,7 @@ func _build_hud() -> void:
 	hud.show_title("Уровень %d — %s" % [level_index + 1, data["name"]])
 
 func _next_wave() -> void:
+	_next_wave_queued = false
 	if player == null or player.hp <= 0.0:
 		return
 	_wave_index += 1
@@ -114,9 +223,20 @@ func _next_wave() -> void:
 	if _wave_index > 0:
 		player.heal(25.0)
 	hud.set_wave_text("Волна %d / %d" % [_wave_index + 1, data["waves"].size()])
+	var delay := 0.0
 	for entry in data["waves"][_wave_index]:
 		for i in entry["count"]:
-			_spawn_demon(entry["element"])
+			_queue_demon_spawn(entry["element"], delay)
+			delay += DEMON_SPAWN_INTERVAL
+
+func _queue_demon_spawn(element: int, delay: float) -> void:
+	_pending_spawns += 1
+	get_tree().create_timer(delay, false).timeout.connect(func() -> void:
+		_pending_spawns -= 1
+		if player != null and is_instance_valid(player) and player.hp > 0.0:
+			_spawn_demon(element)
+		_try_advance_wave()
+	)
 
 func _spawn_demon(element: int) -> void:
 	var demon: Demon
@@ -130,7 +250,7 @@ func _spawn_demon(element: int) -> void:
 	add_child(demon)
 	var angle := _rng.randf_range(0.0, TAU)
 	var radius := _rng.randf_range(16.0, 23.0)
-	demon.global_position = Vector3(cos(angle) * radius, 0.6, sin(angle) * radius)
+	demon.global_position = Vector3(cos(angle) * radius, _floor_y + 0.6, sin(angle) * radius)
 	demon.died.connect(_on_demon_died)
 	_alive += 1
 	SFX.play("demon_spawn", -10.0, 0.3)
@@ -140,8 +260,13 @@ func _on_demon_died(_demon: Demon) -> void:
 	_alive -= 1
 	if is_instance_valid(player):
 		player.add_ult(14.0)
-	if _alive <= 0:
-		get_tree().create_timer(1.6, false).timeout.connect(_next_wave)
+	_try_advance_wave()
+
+func _try_advance_wave() -> void:
+	if _alive > 0 or _pending_spawns > 0 or _next_wave_queued:
+		return
+	_next_wave_queued = true
+	get_tree().create_timer(1.6, false).timeout.connect(_next_wave)
 
 func _on_player_died() -> void:
 	get_tree().create_timer(1.2, false).timeout.connect(func() -> void: failed.emit())

@@ -11,6 +11,7 @@ const HIT_RADIUS := 3.6
 const SEGMENTS := 7
 const TRAIL_LENGTH := 64
 const TRAIL_MARKERS := 5
+const DRAGON_ANIMATION := &"Action" # Импортированное имя дорожки «Armature | Action».
 
 var direction := Vector3.FORWARD
 
@@ -22,6 +23,7 @@ var _visual_root: Node3D
 var _visual_base_position := Vector3.ZERO
 var _visual_base_scale := Vector3.ONE
 var _ending := false
+var _anim: AnimationPlayer
 
 func _ready() -> void:
 	_visual_root = get_node_or_null("ModelPivot") as Node3D
@@ -29,6 +31,9 @@ func _ready() -> void:
 		_build_fallback_dragon()
 	_visual_base_position = _visual_root.position
 	_visual_base_scale = _visual_root.scale
+	_anim = find_child("AnimationPlayer", true, false) as AnimationPlayer
+	if _anim != null and _anim.has_animation(DRAGON_ANIMATION):
+		_anim.play(DRAGON_ANIMATION)
 	_build_trail_markers()
 	_face_direction()
 

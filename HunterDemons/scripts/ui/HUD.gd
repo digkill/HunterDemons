@@ -83,7 +83,22 @@ func _ready() -> void:
 	_title_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	ui.add_child(_title_label)
 
+	var crosshair := Label.new()
+	crosshair.text = "+"
+	crosshair.set_anchors_preset(Control.PRESET_CENTER)
+	crosshair.offset_left = -14
+	crosshair.offset_top = -22
+	crosshair.offset_right = 14
+	crosshair.offset_bottom = 22
+	crosshair.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	crosshair.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	crosshair.add_theme_font_size_override("font_size", 32)
+	crosshair.add_theme_color_override("font_color", Color(1, 1, 1, 0.72))
+	crosshair.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ui.add_child(crosshair)
+
 	_buttons["attack"] = _make_button("УДАР", Color(1.0, 0.45, 0.55), 64.0)
+	_buttons["jump"] = _make_button("ПРЫЖОК", Color(0.45, 0.75, 1.0), 42.0)
 	_buttons["skill1"] = _make_button("САКУРА", Color(1.0, 0.4, 0.8), 46.0)
 	_buttons["skill2"] = _make_button("РЫВОК", Color(1.0, 0.7, 0.3), 46.0)
 	_buttons["ult"] = _make_button("ДРАКОН", Color(0.4, 0.9, 1.0), 54.0)
@@ -96,6 +111,7 @@ func set_player(p: Player) -> void:
 	_buttons["skill1"]["btn"].pressed.connect(p.try_skill1)
 	_buttons["skill2"]["btn"].pressed.connect(p.try_skill2)
 	_buttons["ult"]["btn"].pressed.connect(p.try_ult)
+	_buttons["jump"]["btn"].pressed.connect(p.try_jump)
 
 func _process(_delta: float) -> void:
 	if player == null or not is_instance_valid(player):
@@ -138,6 +154,7 @@ func _flash() -> void:
 func _layout() -> void:
 	var s := get_viewport().get_visible_rect().size
 	_place("attack", s + Vector2(-130, -130))
+	_place("jump", s + Vector2(-405, -215))
 	_place("skill1", s + Vector2(-285, -100))
 	_place("skill2", s + Vector2(-100, -285))
 	_place("ult", s + Vector2(-272, -250))

@@ -1,0 +1,201 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        9999.9599609375,
+        9999.9599609375,
+        9999.9599609375
+      ],
+      "min": [
+        -10000.0,
+        -10000.0,
+        -10000.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 30,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 216,
+      "target": 34962
+    },
+    {
+      "buffer": 1,
+      "byteLength": 120,
+      "target": 34963
+    },
+    {
+      "buffer": 2,
+      "byteLength": 216,
+      "target": 34962
+    },
+    {
+      "buffer": 3,
+      "byteLength": 288,
+      "target": 34962
+    },
+    {
+      "buffer": 4,
+      "byteLength": 144,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 216,
+      "uri": "data:application/octet-stream;base64,AEAcxtc/HEYAQBzG1z8cRtc/HEYAQBzGAEAcxtc/HEbXPxxG1z8cRtc/HEbXPxxG1z8cRtc/HEYAQBzG1z8cRgBAHMYAQBzG1z8cRgBAHMbXPxxGAEAcxtc/HEbXPxxGAEAcxgBAHMbXPxxG1z8cRgBAHMYAQBzGAEAcxgBAHMYAQBzGAEAcxgBAHMbXPxxG1z8cRtc/HEYAQBzGAEAcxgBAHMYAQBzGAEAcxtc/HEYAQBzGAEAcxtc/HEYAQBzGAEAcxgBAHMbXPxxGAEAcxtc/HEbXPxxG"
+    },
+    {
+      "byteLength": 120,
+      "uri": "data:application/octet-stream;base64,AAAAAAEAAAACAAAAAwAAAAMAAAAEAAAABAAAAAUAAAADAAAABgAAAAcAAAAIAAAACAAAAAkAAAAJAAAACgAAAAYAAAALAAAACwAAAAUAAAAFAAAADAAAAA0AAAAOAAAADgAAAA0AAAANAAAADwAAABAAAAARAAAA"
+    },
+    {
+      "byteLength": 216,
+      "uri": "data:application/octet-stream;base64,HiMUP7/LE7+geBM/LHQTv0p6FL+geBM/dfcTP3X3E7+geBO/dfcTv3X3E7+geBO/LHQTv0p6FL+geBM/LHQTv0p6FD+geBM/dfcTv3X3Ez+geBO/dfcTP3X3E7+geBO/dfcTP3X3Ez+geBO/LHQTv0p6FD+geBM/HiMUP7/LEz+geBM/dfcTP3X3Ez+geBO/LHQTv0p6FL+geBM/HiMUP7/LEz+geBM/HiMUP7/LE7+geBM/HiMUP7/LE7+geBM/dfcTP3X3Ez+geBO/dfcTP3X3E7+geBO/"
+    },
+    {
+      "byteLength": 288,
+      "uri": "data:application/octet-stream;base64,qDPRPqgz0b4J71C/AACAv6gz0b6oM9G+Ce9QvwAAgL+oM9G+qDPRPgnvUL8AAIC/jpsRP17taT7YRUq/AACAv6gz0b6oM9G+Ce9QvwAAgL+YYh6/t2soPlyqRL8AAIC/L4MoP53e171e0T6/AACAv2FzUD8svNA++JTTPgAAgL/4JlI/j8vJvviU0z4AAIC/qDPRvqgz0T4J71C/AACAv6gz0T6oM9E+Ce9QvwAAgL+oM9G+qDPRvgnvUL8AAIC/6n1Qv4Oe0j7witG+AACAv7IPRr9cVx0+xlodPwAAgL8UlE+/AS/UvviU0z4AAIC/55/Tvg8gzD7+k1E/AACAv0yRzz7WP9A+/pNRPwAAgL+Kmdc+DezHvv6TUT8AAIC/"
+    },
+    {
+      "byteLength": 144,
+      "uri": "data:application/octet-stream;base64,icH/PgAAsTiJwf8+KqmqPtEKgD4AALE40QqAPiqpqj6+AAA/KqmqPr4AAD+iqyo/0QqAPqKrKj9gNwg6KqmqPmA3CDqiqyo/htH/PqKrKj+G0f8+rvp/P9EKgD6u+n8/vgAAPyq5qj4shD8/oqsqPyyEPz8quao+LIQ/Pyq5qj5t538/oqsqP23nfz8quao+"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_emissive_strength"
+  ],
+  "images": [
+    {
+      "uri": "textures/Stylized_CloudySky_CubeMap_002_SHOWREEL.png"
+    }
+  ],
+  "materials": [
+    {
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 1.0
+        }
+      },
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cube_Material_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 0,
+            "TANGENT": 3,
+            "TEXCOORD_0": 4
+          },
+          "indices": 1,
+          "material": 0,
+          "mode": 5
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Cube_Material_0"
+    },
+    {
+      "children": [
+        0
+      ],
+      "name": "Cube"
+    },
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "6k Stylized Cloudy Skybox 002",
+      "rotation": [
+        1.1102230246251565e-16,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        3
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

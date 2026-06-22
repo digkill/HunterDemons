@@ -37,6 +37,7 @@ func _register_input_actions() -> void:
 		"move_up": [KEY_W, KEY_UP],
 		"move_down": [KEY_S, KEY_DOWN],
 		"attack": [KEY_SPACE, KEY_J],
+		"jump": [KEY_C],
 		"skill_1": [KEY_Q],
 		"skill_2": [KEY_E],
 		"ult": [KEY_R],

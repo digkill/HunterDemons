@@ -4,6 +4,7 @@ extends SceneTree
 
 const HERO_BINARY := "res://assets/MainHero/hero.scn"
 const HERO_TEXT := "res://assets/MainHero/hero.tscn"
+const VILLAGE_MODEL := "res://assets/Stylized Japanese Market Game-Ready Env/Stylized Japanese Market Game-Ready Env.gltf"
 
 const SCRIPTS := {
 	"player": "res://scripts/player/Player.gd",
@@ -380,15 +381,25 @@ func _make_temple_decor() -> Node3D:
 func _make_camera_rig_scene() -> Node3D:
 	var root := Node3D.new()
 	root.name = "CameraRig"
-	root.rotation_degrees.x = -55.0
 	root.set_script(load(SCRIPTS["camera_rig"]))
+
+	var pivot := Node3D.new()
+	pivot.name = "Pivot"
+	pivot.rotation_degrees.x = -18.0
+	root.add_child(pivot)
+
+	var spring_arm := SpringArm3D.new()
+	spring_arm.name = "SpringArm3D"
+	spring_arm.spring_length = 7.0
+	spring_arm.margin = 0.2
+	spring_arm.collision_mask = 0
+	pivot.add_child(spring_arm)
 
 	var camera := Camera3D.new()
 	camera.name = "Camera3D"
-	camera.position = Vector3(0, 0, 11.0)
-	camera.fov = 55.0
+	camera.fov = 65.0
 	camera.current = true
-	root.add_child(camera)
+	spring_arm.add_child(camera)
 	return root
 
 func _make_dragon_spirit_scene() -> Node3D:
@@ -494,9 +505,9 @@ func _add_village_ground(root: Node) -> void:
 	ground.add_child(col)
 
 func _add_village_model(root: Node) -> void:
-	if not ResourceLoader.exists("res://assets/location/Vilage/Vilgae.gltf"):
+	if not ResourceLoader.exists(VILLAGE_MODEL):
 		return
-	var scene := load("res://assets/location/Vilage/Vilgae.gltf") as PackedScene
+	var scene := load(VILLAGE_MODEL) as PackedScene
 	var model := scene.instantiate()
 	model.name = "VillageModel"
 	model.scale = Vector3.ONE * 80.0

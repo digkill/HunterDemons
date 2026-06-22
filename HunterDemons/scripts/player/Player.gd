@@ -21,6 +21,12 @@ const DRAGON_SPIRIT_SCENE := preload("res://scenes/effects/DragonSpirit.tscn")
 
 const SPEED := 6.5
 const GRAVITY := 28.0
+const ENVIRONMENT_COLLISION_MASK := 1 | (1 << 1)
+const JUMP_VELOCITY := 10.0
+const JUMP_ATTACK_DIVE_SPEED := 15.0
+const JUMP_ATTACK_DAMAGE := 32.0
+const JUMP_ATTACK_RADIUS := 3.0
+const DRAGON_SPAWN_HEIGHT := 3.2
 
 const ATTACK_COOLDOWN := 0.45
 const ATTACK_RANGE := 2.6
@@ -47,6 +53,7 @@ var move_input := Vector2.ZERO # задаёт виртуальный джойс�
 var facing := Vector3.FORWARD
 var combat_enabled := true
 var arena_half := 0.0 # 0 = без ограничений; задаётся уровнем
+var camera_rig: CameraRig
 
 var attack_cd := 0.0
 var skill1_cd := 0.0
@@ -60,9 +67,12 @@ var _ult_ring_mat: StandardMaterial3D
 var _anim: AnimationPlayer
 var _action_playing := false
 var _attack_index := 0
+var _jump_attack_active := false
 
 func _ready() -> void:
 	add_to_group("player")
+	# Слой 2 — детальные коллайдеры зданий города. Мобы его не используют.
+	collision_mask = ENVIRONMENT_COLLISION_MASK
 	var col := get_node_or_null("CollisionShape3D") as CollisionShape3D
 	if col == null:
 		col = CollisionShape3D.new()
@@ -240,6 +250,8 @@ func _physics_process(delta: float) -> void:
 
 	if combat_enabled and Input.is_action_pressed("attack"):
 		try_attack()
+	if Input.is_action_just_pressed("jump"):
+		try_jump()
 	if combat_enabled and Input.is_action_just_pressed("skill_1"):
 		try_skill1()
 	if combat_enabled and Input.is_action_just_pressed("skill_2"):
@@ -250,9 +262,9 @@ func _physics_process(delta: float) -> void:
 	var input_2d := move_input
 	if input_2d.length() < 0.15:
 		input_2d = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	var dir := Vector3(input_2d.x, 0.0, input_2d.y)
-	if dir.length() > 1.0:
-		dir = dir.normalized()
+	var dir := _camera_relative_direction(input_2d)
+	if camera_rig != null and is_instance_valid(camera_rig):
+		facing = camera_rig.get_aim_direction()
 
 	if _dash_left > 0.0:
 		_dash_left -= delta
@@ -269,19 +281,31 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = dir.x * SPEED
 		velocity.z = dir.z * SPEED
-		if dir.length() > 0.1:
-			facing = dir.normalized()
 
-	if is_on_floor():
+	var was_on_floor := is_on_floor()
+	# Не сбрасываем положительную скорость в кадр нажатия прыжка.
+	# Иначе проигрывается только анимация, а тело остаётся на земле.
+	if was_on_floor and velocity.y <= 0.0:
 		velocity.y = -0.5
-	else:
+	elif not was_on_floor:
 		velocity.y -= GRAVITY * delta
 	move_and_slide()
+	if _jump_attack_active and not was_on_floor and is_on_floor():
+		_land_jump_attack()
 	if arena_half > 0.0:
 		global_position.x = clampf(global_position.x, -arena_half, arena_half)
 		global_position.z = clampf(global_position.z, -arena_half, arena_half)
 	rotation.y = lerp_angle(rotation.y, atan2(facing.x, facing.z), minf(1.0, 14.0 * delta))
 	_update_locomotion()
+
+func _camera_relative_direction(input_2d: Vector2) -> Vector3:
+	if input_2d.length() > 1.0:
+		input_2d = input_2d.normalized()
+	if camera_rig == null or not is_instance_valid(camera_rig):
+		return Vector3(input_2d.x, 0.0, input_2d.y)
+	# Вверх на левом стике = движение туда, куда смотрит камера.
+	return (camera_rig.get_planar_right() * input_2d.x
+		+ camera_rig.get_planar_forward() * -input_2d.y).normalized()
 
 func _update_locomotion() -> void:
 	if _anim == null or _action_playing or hp <= 0.0:
@@ -304,6 +328,9 @@ func _on_action_finished(_anim_name: StringName) -> void:
 func try_attack() -> void:
 	if not combat_enabled or hp <= 0.0 or attack_cd > 0.0:
 		return
+	if not is_on_floor():
+		try_jump_attack()
+		return
 	attack_cd = ATTACK_COOLDOWN
 	_play_action(ATTACK_ANIMS[_attack_index % ATTACK_ANIMS.size()], 0.5)
 	_attack_index += 1
@@ -315,6 +342,32 @@ func try_attack() -> void:
 		var damage := ATTACK_DAMAGE * (CRIT_MULT if crit else 1.0)
 		demon.take_damage(damage, Elements.Type.PHYSICAL, false, crit)
 		add_ult(3.0)
+
+func try_jump() -> void:
+	if hp <= 0.0 or not is_on_floor() or _dash_left > 0.0:
+		return
+	velocity.y = JUMP_VELOCITY
+	_play_action("jump", 0.5)
+
+func try_jump_attack() -> void:
+	if not combat_enabled or hp <= 0.0 or _jump_attack_active or attack_cd > 0.0:
+		return
+	_jump_attack_active = true
+	attack_cd = 0.7
+	velocity.y = -JUMP_ATTACK_DIVE_SPEED
+	_play_action("jump_attack", 0.65)
+	SFX.play("swing", -1.0, 0.08)
+
+func _land_jump_attack() -> void:
+	_jump_attack_active = false
+	SFX.play("skill_sakura", -3.0, 0.1)
+	var impact_pos := global_position + Vector3.UP * 0.15
+	FX.burst(get_parent(), impact_pos, Color(1.0, 0.55, 0.22), 2.1, 0.3)
+	for demon in _demons_in_range(JUMP_ATTACK_RADIUS):
+		var crit := randf() < CRIT_CHANCE
+		var damage := JUMP_ATTACK_DAMAGE * (CRIT_MULT if crit else 1.0)
+		demon.take_damage(damage, Elements.Type.PHYSICAL, false, crit)
+		add_ult(5.0)
 
 func try_skill1() -> void:
 	if not combat_enabled or hp <= 0.0 or skill1_cd > 0.0:
@@ -351,7 +404,8 @@ func try_ult() -> void:
 	var dragon := DRAGON_SPIRIT_SCENE.instantiate() as DragonSpirit
 	dragon.direction = facing
 	get_parent().add_child(dragon)
-	dragon.global_position = global_position + Vector3.UP * 1.4 + facing * 1.0
+	# Дух летит над полем боя, не пересекается с землёй и персонажами.
+	dragon.global_position = global_position + Vector3.UP * DRAGON_SPAWN_HEIGHT + facing * 1.0
 
 func take_damage(amount: float, _element: int = Elements.Type.PHYSICAL) -> void:
 	if hp <= 0.0 or _dash_left > 0.0: # во время рывка — неуязвимость

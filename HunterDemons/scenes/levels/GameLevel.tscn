@@ -1,6 +1,7 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dbwqplln45nvy"]
 
-[ext_resource type="Script" path="res://scripts/levels/GameLevel.gd" id="script_game_level"]
+[ext_resource type="Script" uid="uid://dvgaiji2dn5lh" path="res://scripts/levels/GameLevel.gd" id="script_game_level"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_v8eeh"]
 size = Vector3(90, 1, 90)
 
@@ -685,22 +686,21 @@ transform = Transform3D(0.81915206, -0.43938506, 0.36868784, 0, 0.64278764, 0.76
 light_energy = 1.1
 shadow_enabled = true
 
-[node name="ArenaOverheadLight" type="SpotLight3D" parent="."]
-position = Vector3(0, 26, 0)
-rotation_degrees = Vector3(-90, 0, 0)
+[node name="ArenaOverheadLight" type="SpotLight3D" parent="." unique_id=295755365]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 26, 0)
 light_color = Color(1, 0.9, 0.78, 1)
 light_energy = 10.0
 spot_range = 42.0
 spot_angle = 58.0
 
-[node name="ArenaKeyLight" type="OmniLight3D" parent="."]
-position = Vector3(-12, 18, 8)
+[node name="ArenaKeyLight" type="OmniLight3D" parent="." unique_id=1961668646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 18, 8)
 light_color = Color(1, 0.72, 0.52, 1)
 light_energy = 7.0
 omni_range = 38.0
 
-[node name="ArenaFillLight" type="OmniLight3D" parent="."]
-position = Vector3(14, 15, -10)
+[node name="ArenaFillLight" type="OmniLight3D" parent="." unique_id=367493169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 15, -10)
 light_color = Color(0.32, 0.72, 1, 1)
 light_energy = 5.5
 omni_range = 34.0
@@ -714,6 +714,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_v8eeh")
 
 [node name="GroundMesh" type="MeshInstance3D" parent="Arena/Ground" unique_id=682365852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 material_override = SubResource("StandardMaterial3D_ka8ql")
 mesh = SubResource("PlaneMesh_vey8j")
 
