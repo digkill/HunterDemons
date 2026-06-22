@@ -11,18 +11,12 @@ const IceDemonScene := preload("res://scenes/characters/IceDemon.tscn")
 const TankDemonScene := preload("res://scenes/characters/TankDemon.tscn")
 const CameraRigScene := preload("res://scenes/player/CameraRig.tscn")
 const HUDScene := preload("res://scenes/ui/HUD.tscn")
-const CYBER_CITY_PATH := "res://assets/Cyberpunk City/Cyberpunk City.gltf"
-const CITY_SKYBOX_PATH := "res://assets/Anime Starry Night/Anime Starry Night.gltf"
-const CITY_COLLISION_LAYER := 1 << 1
+const MEGA_CITY_COLLISION_LAYER := 1 << 1
 const DEMON_SPAWN_INTERVAL := 0.28
-# Исходный AABB города: ~42×21×24 м. Масштаб увеличен ещё вдвое.
-const CYBER_CITY_SCALE := 12.0
-# Центрирование AABB + подъём города над ареной на 3 м.
-const CYBER_CITY_POSITION := Vector3(-26.46, 4.144, 4.128)
-# Видимая дорожная поверхность находится на высоте корня сцены города.
-const CYBER_CITY_FLOOR_Y := 4.144
+# Видимая дорожная поверхность находится на высоте основания MegaCity.
+const MEGA_CITY_FLOOR_Y := 4.144
 
-var level_index := 0
+@export var level_index := 0
 var data: Dictionary = {}
 var player: Player
 var hud: HUD
@@ -32,9 +26,8 @@ var _alive := 0
 var _pending_spawns := 0
 var _next_wave_queued := false
 var _rng := RandomNumberGenerator.new()
-var _cyber_city: Node3D
-var _cyber_city_floor: StaticBody3D
-var _city_skybox: Node3D
+var _mega_city: Node3D
+var _mega_city_floor: StaticBody3D
 var _floor_y := 0.0
 
 func _init(index := 0) -> void:
@@ -46,8 +39,7 @@ func setup(index: int) -> void:
 	_rng.seed = hash("hunter_demons_%d" % index)
 
 func _ready() -> void:
-	if data.is_empty():
-		setup(level_index)
+	setup(level_index)
 	_configure_environment()
 	_configure_arena()
 	_select_decor()
@@ -60,7 +52,7 @@ func _configure_environment() -> void:
 	var env := Environment.new()
 	var is_city: bool = data["style"] == "city"
 	if is_city:
-		# Ночное небо берётся из Anime Starry Night, процедурный фон отключён.
+		# Для города оставляем только однотонный ночной фон без неба.
 		env.background_mode = Environment.BG_COLOR
 		env.background_color = Color(0.01, 0.005, 0.03)
 	else:
@@ -110,62 +102,25 @@ func _select_decor() -> void:
 			# Первый уровень использует готовую сцену, а не старые процедурные коробки.
 			child.visible = str(child.name).to_snake_case() == data["style"] and child.name != "City"
 	var is_city: bool = data["style"] == "city"
-	_floor_y = CYBER_CITY_FLOOR_Y if is_city else 0.0
-	_set_cyber_city_visible(is_city)
-	_set_city_skybox_visible(is_city)
+	_floor_y = MEGA_CITY_FLOOR_Y if is_city else 0.0
+	_set_mega_city_visible(is_city)
 
-func _set_city_skybox_visible(visible: bool) -> void:
-	if _city_skybox == null:
-		if not visible:
+func _set_mega_city_visible(visible: bool) -> void:
+	if _mega_city == null:
+		_mega_city = get_node_or_null("MegaCity") as Node3D
+		if _mega_city == null:
+			push_error("В сцене уровня отсутствует MegaCity")
 			return
-		var scene := load(CITY_SKYBOX_PATH) as PackedScene
-		if scene == null:
-			push_error("Не загрузился skybox города: " + CITY_SKYBOX_PATH)
-			return
-		_city_skybox = scene.instantiate() as Node3D
-		_city_skybox.name = "AnimeStarryNightSkybox"
-		add_child(_city_skybox)
-		_configure_city_skybox()
-	_city_skybox.visible = visible
-
-func _configure_city_skybox() -> void:
-	for node in _city_skybox.find_children("*", "MeshInstance3D", true, false):
-		var mesh_node := node as MeshInstance3D
-		mesh_node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		if mesh_node.mesh == null:
-			continue
-		for surface in mesh_node.mesh.get_surface_count():
-			var source := mesh_node.get_active_material(surface) as StandardMaterial3D
-			if source == null:
-				continue
-			var material := source.duplicate() as StandardMaterial3D
-			material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-			material.cull_mode = BaseMaterial3D.CULL_DISABLED
-			mesh_node.set_surface_override_material(surface, material)
-
-func _set_cyber_city_visible(visible: bool) -> void:
-	if _cyber_city == null:
-		if not visible:
-			return
-		var scene := load(CYBER_CITY_PATH) as PackedScene
-		if scene == null:
-			push_error("Не загрузилась сцена города: " + CYBER_CITY_PATH)
-			return
-		_cyber_city = scene.instantiate() as Node3D
-		_cyber_city.name = "CyberpunkCity"
-		_cyber_city.scale = Vector3.ONE * CYBER_CITY_SCALE
-		_cyber_city.position = CYBER_CITY_POSITION
-		add_child(_cyber_city)
-		_build_cyber_city_collisions()
-		_build_cyber_city_floor()
-	_cyber_city.visible = visible
-	if _cyber_city_floor != null:
-		_cyber_city_floor.visible = visible
+		_build_mega_city_collisions()
+		_build_mega_city_floor()
+	_mega_city.visible = visible
+	if _mega_city_floor != null:
+		_mega_city_floor.visible = visible
 
 # Неподвижные здания используют StaticBody3D: это корректнее и дешевле, чем
 # RigidBody3D, и блокирует проход игрока/демонов через геометрию города.
-func _build_cyber_city_collisions() -> void:
-	for node in _cyber_city.find_children("*", "MeshInstance3D", true, false):
+func _build_mega_city_collisions() -> void:
+	for node in _mega_city.find_children("*", "MeshInstance3D", true, false):
 		var mesh_node := node as MeshInstance3D
 		if mesh_node.mesh == null:
 			continue
@@ -173,8 +128,8 @@ func _build_cyber_city_collisions() -> void:
 		if shape == null:
 			continue
 		var body := StaticBody3D.new()
-		body.name = "PlayerCityCollision"
-		body.collision_layer = CITY_COLLISION_LAYER
+		body.name = "PlayerMegaCityCollision"
+		body.collision_layer = MEGA_CITY_COLLISION_LAYER
 		body.collision_mask = 0
 		var collision := CollisionShape3D.new()
 		collision.shape = shape
@@ -183,16 +138,16 @@ func _build_cyber_city_collisions() -> void:
 
 # У glTF-улицы нет надёжной игровой поверхности; отдельный статический пол
 # удерживает персонажей на уровне города, не добавляя лишнюю геометрию в кадр.
-func _build_cyber_city_floor() -> void:
-	_cyber_city_floor = StaticBody3D.new()
-	_cyber_city_floor.name = "CyberpunkCityFloor"
+func _build_mega_city_floor() -> void:
+	_mega_city_floor = StaticBody3D.new()
+	_mega_city_floor.name = "MegaCityFloor"
 	var collision := CollisionShape3D.new()
 	var shape := BoxShape3D.new()
 	shape.size = Vector3(90.0, 0.2, 90.0)
 	collision.shape = shape
-	collision.position.y = CYBER_CITY_FLOOR_Y - 0.1
-	_cyber_city_floor.add_child(collision)
-	add_child(_cyber_city_floor)
+	collision.position.y = MEGA_CITY_FLOOR_Y - 0.1
+	_mega_city_floor.add_child(collision)
+	add_child(_mega_city_floor)
 
 func _spawn_player() -> void:
 	player = PlayerScene.instantiate()

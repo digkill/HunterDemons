@@ -3,7 +3,11 @@ extends Node
 ## Запуск с аргументом `-- --smoke` сразу стартует уровень 1 (для автотестов).
 
 const VillageLevelScene := preload("res://scenes/levels/VillageLevel.tscn")
-const GameLevelScene := preload("res://scenes/levels/GameLevel.tscn")
+const GameLevelScenes := [
+	preload("res://scenes/levels/NeonDistrict.tscn"),
+	preload("res://scenes/levels/BambooGrove.tscn"),
+	preload("res://scenes/levels/FloodedTemple.tscn"),
+]
 const MainMenuScene := preload("res://scenes/ui/MainMenu.tscn")
 const NarrationOverlayScene := preload("res://scenes/ui/NarrationOverlay.tscn")
 
@@ -87,7 +91,7 @@ func _start_village(index: int) -> void:
 func _start_level(index: int) -> void:
 	_clear()
 	_level_index = index
-	_level = GameLevelScene.instantiate()
+	_level = GameLevelScenes[index].instantiate() as GameLevel
 	_level.setup(index)
 	add_child(_level)
 	_level.completed.connect(_on_level_completed)

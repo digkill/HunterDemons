@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbwqplln45nvy"]
 
 [ext_resource type="Script" uid="uid://dvgaiji2dn5lh" path="res://scripts/levels/GameLevel.gd" id="script_game_level"]
+[ext_resource type="PackedScene" path="res://assets/Quill - MegaCity/Quill - MegaCity.gltf" id="mega_city"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v8eeh"]
 size = Vector3(90, 1, 90)
@@ -704,6 +705,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 15, -10)
 light_color = Color(0.32, 0.72, 1, 1)
 light_energy = 5.5
 omni_range = 34.0
+
+[node name="MegaCity" type="Node3D" parent="." instance=ExtResource("mega_city")]
+transform = Transform3D(250, 0, 0, 0, 250, 0, 0, 0, 250, 110, 254.144, 145)
+editable_children = true
 
 [node name="Arena" type="Node3D" parent="." unique_id=650243206]
 
